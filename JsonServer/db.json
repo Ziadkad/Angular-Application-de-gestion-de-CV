@@ -9,7 +9,7 @@
       "password": "password123",
       "cv": "https://example.com/john_smith_cv.pdf",
       "skills": ["JavaScript", "React", "Node.js"],
-      "role" : "candidate"
+      "role" : "CANDIDATE"
     },
     {
       "id": "67890",
@@ -20,7 +20,7 @@
       "password": "qwerty456",
       "cv": "https://example.com/jane_doe_cv.pdf",
       "skills": ["Python", "Django", "SQL"],
-      "role" : "candidate"
+      "role" : "CANDIDATE"
     }
   ],
   "companies": [
@@ -30,7 +30,7 @@
       "email": "info@abccorp.com",
       "password": "abc@123",
       "capital": 1000000,
-      "role" : "company"
+      "role" : "COMPANY"
     },
     {
       "id": "XYZ456",
@@ -38,7 +38,7 @@
       "email": "contact@xyzenterprises.com",
       "password": "xyz#456",
       "capital": 500000,
-      "role" : "company"
+      "role" : "COMPANY"
     }
   ],
   "jobOffers": [
