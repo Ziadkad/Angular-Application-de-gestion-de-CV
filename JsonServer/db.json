@@ -8,7 +8,8 @@
       "email": "john.smith@example.com",
       "password": "password123",
       "cv": "https://example.com/john_smith_cv.pdf",
-      "skills": ["JavaScript", "React", "Node.js"]
+      "skills": ["JavaScript", "React", "Node.js"],
+      "role" : "candidate"
     },
     {
       "id": "67890",
@@ -18,7 +19,8 @@
       "email": "jane.doe@example.com",
       "password": "qwerty456",
       "cv": "https://example.com/jane_doe_cv.pdf",
-      "skills": ["Python", "Django", "SQL"]
+      "skills": ["Python", "Django", "SQL"],
+      "role" : "candidate"
     }
   ],
   "companies": [
@@ -27,14 +29,16 @@
       "nom": "ABC Corporation",
       "email": "info@abccorp.com",
       "password": "abc@123",
-      "capital": 1000000
+      "capital": 1000000,
+      "role" : "company"
     },
     {
       "id": "XYZ456",
       "nom": "XYZ Enterprises",
       "email": "contact@xyzenterprises.com",
       "password": "xyz#456",
-      "capital": 500000
+      "capital": 500000,
+      "role" : "company"
     }
   ],
   "jobOffers": [
