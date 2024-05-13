@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { forkJoin, Observable } from 'rxjs';
 import { Candidates } from '../interfaces/candidates';
 import { Companies } from '../interfaces/companies';
 
@@ -27,32 +27,64 @@ export class AuthService {
   public isAuthenticated: boolean = false;
   public roles: string = "";
 
-  logIn(email:string,password:string):boolean{
-    this.getAllCandidates().subscribe(data =>{
-      this.candidates=data;
-      
-    })
-    this.getAllCompanies().subscribe(data =>{
-      this.companies=data;
-    })
-    console.log(this.candidates,this.companies)
-    for (const item of this.candidates) {
-      if ((email === item.email) && (password === item.password)) {
-        this.changeVariables(item);
-        this.saveSessionToLocalStorage();
-        return true;
+  // logIn(email:string,password:string):boolean{
+  //   this.getAllCandidates().subscribe(data =>{
+  //     this.candidates=data;
+  //   })
+  //   this.getAllCompanies().subscribe(data =>{
+  //     this.companies=data;
+  //   })
+  //   console.log(this.candidates,this.companies)
+  //   for (const item of this.candidates) {
+  //     if ((email === item.email) && (password === item.password)) {
+  //       this.changeVariables(item);
+  //       this.saveSessionToLocalStorage();
+  //       return true;
+  //     }
+  //   }
+  //   for (const item of this.companies) {
+  //     if ((email === item.email) && (password === item.password)) {
+  //       this.changeVariables(item);
+  //       this.saveSessionToLocalStorage();
+  //       return true;
+  //     }
+  //   }
+  //   return false;
+  // }
+  logIn(email: string, password: string): boolean {
+    let loggedIn = false
+    forkJoin([
+      this.getAllCandidates(),
+      this.getAllCompanies()
+    ]).subscribe(([candidates, companies]) => {
+      console.log(candidates, companies); // Log the fetched data
+      for (const item of candidates) {
+        if (email === item.email && password === item.password) {
+          this.changeVariables(item);
+          this.saveSessionToLocalStorage();
+          loggedIn = true;
+          break;
+        }
       }
-    }
-    for (const item of this.companies) {
-      if ((email === item.email) && (password === item.password)) {
-        this.changeVariables(item);
-        this.saveSessionToLocalStorage();
-        return true;
+      if (!loggedIn) {
+        for (const item of companies) {
+          if (email === item.email && password === item.password) {
+            this.changeVariables(item);
+            this.saveSessionToLocalStorage();
+            loggedIn = true;
+            break;
+          }
+        }
       }
-    }
-    return false;
+      if (!loggedIn) {
+        console.log("Login failed");
+      }
+    }, error => {
+      console.error("Error fetching data:", error)
+    });
+      return loggedIn;
   }
-
+  
   logOut():void{
     this.userinfos = null;
     this.isAuthenticated = false;
