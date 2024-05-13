@@ -7,26 +7,29 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CrudJobOffersService {
+  private apiUrl: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.apiUrl = 'http://localhost:3000/jobOffers';
+  }
 
   createJobOffer(jobOffer: JobOffers): Observable<JobOffers> {
-    return this.http.post<JobOffers>('http://localhost:3000/jobOffers', jobOffer);
+    return this.http.post<JobOffers>(this.apiUrl, jobOffer);
   }
 
   getAllJobOffers(): Observable<JobOffers[]> {
-    return this.http.get<JobOffers[]>('http://localhost:3000/jobOffers');
+    return this.http.get<JobOffers[]>(this.apiUrl);
   }
 
-  getJobOfferById(id: string): Observable<JobOffers> {
-    return this.http.get<JobOffers>('http://localhost:3000/jobOffers/' + id);
+  getJobOfferById(id: number): Observable<JobOffers> {
+    return this.http.get<JobOffers>(`${this.apiUrl}/${id}`);
   }
 
   updateJobOffer(jobOffer: JobOffers): Observable<JobOffers> {
-    return this.http.put<JobOffers>('http://localhost:3000/jobOffers/' + jobOffer.id, jobOffer);
+    return this.http.put<JobOffers>(`${this.apiUrl}/${jobOffer.id}`, jobOffer);
   }
 
-  deleteJobOffer(id: string): Observable<any> {
-    return this.http.delete<any>('http://localhost:3000/jobOffers/' + id);
+  deleteJobOffer(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/${id}`);
   }
 }

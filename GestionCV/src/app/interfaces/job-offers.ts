@@ -1,8 +1,8 @@
 import { Skills } from "../enums/skills";
 
 export interface JobOffers {
-    id: string;
-    company_id: string;
+    id: number;
+    company_id: number;
     title: string;
     description: string;
     skills_required: Skills[];

@@ -1,70 +1,100 @@
 {
   "candidates": [
     {
-      "id": "12345",
+      "id": "1",
       "nom": "Smith",
       "prenom": "John",
       "datenaissance": "1990-05-20",
       "email": "john.smith@example.com",
       "password": "password123",
       "cv": "https://example.com/john_smith_cv.pdf",
-      "skills": ["JavaScript", "React", "Node.js"],
-      "role" : "CANDIDATE"
+      "skills": [
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "role": "CANDIDATE"
     },
     {
-      "id": "67890",
+      "id": "2",
       "nom": "Doe",
       "prenom": "Jane",
       "datenaissance": "1988-10-15",
       "email": "jane.doe@example.com",
       "password": "qwerty456",
       "cv": "https://example.com/jane_doe_cv.pdf",
-      "skills": ["Python", "Django", "SQL"],
-      "role" : "CANDIDATE"
+      "skills": [
+        "Python",
+        "Django",
+        "SQL"
+      ],
+      "role": "CANDIDATE"
     }
   ],
   "companies": [
     {
-      "id": "ABC123",
+      "id": "1",
       "nom": "ABC Corporation",
       "email": "info@abccorp.com",
       "password": "abc@123",
       "capital": 1000000,
-      "role" : "COMPANY"
+      "role": "COMPANY"
     },
     {
-      "id": "XYZ456",
+      "id": "2",
       "nom": "XYZ Enterprises",
       "email": "contact@xyzenterprises.com",
       "password": "xyz#456",
       "capital": 500000,
-      "role" : "COMPANY"
+      "role": "COMPANY"
     }
   ],
   "jobOffers": [
     {
-      "id": "001",
+      "id": "1",
       "company_id": "ABC123",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
-      "skills_required": ["Java", "Spring", "Hibernate"]
+      "skills_required": [
+        "Java",
+        "Spring",
+        "Hibernate"
+      ]
     },
     {
-      "id": "002",
+      "id": "2",
       "company_id": "XYZ456",
       "title": "Data Scientist",
       "description": "Exciting opportunity for a data scientist to work on challenging projects.",
-      "skills_required": ["Python", "Machine Learning", "TensorFlow"]
+      "skills_required": [
+        "Python",
+        "Machine Learning",
+        "TensorFlow"
+      ]
+    },
+    {
+      "id": 3,
+      "company_id": 3,
+      "description": "",
+      "title": "",
+      "skills_required": []
+    },
+    {
+      "id": 3,
+      "company_id": 3,
+      "description": "",
+      "title": "",
+      "skills_required": []
     }
   ],
   "postulations": [
     {
-      "jobOffers_id": "001",
+      "jobOffers_id": "1",
       "candidate_id": "12345",
       "Date": "2024-05-13"
     },
     {
-      "jobOffers_id": "002",
+      "jobOffers_id": "2",
       "candidate_id": "67890",
       "Date": "2024-05-14"
     }
