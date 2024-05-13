@@ -1,9 +1,68 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "zaml" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
-  }
+  "candidates": [
+    {
+      "id": "12345",
+      "nom": "Smith",
+      "prenom": "John",
+      "datenaissance": "1990-05-20",
+      "email": "john.smith@example.com",
+      "password": "password123",
+      "cv": "https://example.com/john_smith_cv.pdf",
+      "skills": ["JavaScript", "React", "Node.js"]
+    },
+    {
+      "id": "67890",
+      "nom": "Doe",
+      "prenom": "Jane",
+      "datenaissance": "1988-10-15",
+      "email": "jane.doe@example.com",
+      "password": "qwerty456",
+      "cv": "https://example.com/jane_doe_cv.pdf",
+      "skills": ["Python", "Django", "SQL"]
+    }
+  ],
+  "companies": [
+    {
+      "id": "ABC123",
+      "nom": "ABC Corporation",
+      "email": "info@abccorp.com",
+      "password": "abc@123",
+      "capital": 1000000
+    },
+    {
+      "id": "XYZ456",
+      "nom": "XYZ Enterprises",
+      "email": "contact@xyzenterprises.com",
+      "password": "xyz#456",
+      "capital": 500000
+    }
+  ],
+  "jobOffers": [
+    {
+      "id": "001",
+      "company_id": "ABC123",
+      "title": "Software Engineer",
+      "description": "Join our team to develop cutting-edge software solutions.",
+      "skills_required": ["Java", "Spring", "Hibernate"]
+    },
+    {
+      "id": "002",
+      "company_id": "XYZ456",
+      "title": "Data Scientist",
+      "description": "Exciting opportunity for a data scientist to work on challenging projects.",
+      "skills_required": ["Python", "Machine Learning", "TensorFlow"]
+    }
+  ],
+  "postulations": [
+    {
+      "jobOffers_id": "001",
+      "candidate_id": "12345",
+      "Date": "2024-05-13"
+    },
+    {
+      "jobOffers_id": "002",
+      "candidate_id": "67890",
+      "Date": "2024-05-14"
+    }
+  ]
+}
