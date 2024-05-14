@@ -20,7 +20,7 @@ export class AppComponent {
   }
   constructor(private auth : AuthService){}
   ngOnInit(){
-    console.log("sahdsadasd")
+    // console.log("sahdsadasd")
 
     // this.auth.signUpAsCandidate(
     //   {
@@ -35,7 +35,7 @@ export class AppComponent {
     //     role: Roles.CANDIDATE
     // })
     this.auth.signUpAsCompany(this.company).subscribe(data=>{
-      console.log(data);
+      // console.log(data);
     })
   }
 }
