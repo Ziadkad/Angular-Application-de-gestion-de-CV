@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { CrudJobOffersService } from '../../services/crud-job-offers.service';
-import { JobOffers } from '../../interfaces/job-offers';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { map, Observable } from 'rxjs';
 import { AuthService } from '../../services/auth.service';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-signin',
@@ -20,8 +19,9 @@ export class SigninComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private authservice: AuthService
-  ) {} // Inject FormBuilder
+    private authservice: AuthService,
+    private messageService: MessageService
+    ) {}
 
   ngOnInit(): void {
     this.emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
@@ -64,7 +64,8 @@ export class SigninComponent {
     if (this.myForm.valid) {
       this.authservice.logIn(this.myForm.value.email, this.myForm.value.password);
       if(!this.authservice.isAuthenticated){
-        alert("Wrong credintials !");
+        alert("Wrong");
+        // this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Message Content' });
       }
     }
     

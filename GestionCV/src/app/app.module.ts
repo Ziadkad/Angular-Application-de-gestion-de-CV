@@ -14,6 +14,9 @@ import { SignupCandidatesComponent } from './components/signup-candidates/signup
 import { SignupCompaniesComponent } from './components/signup-companies/signup-companies.component';
 import { RouterOutlet } from '@angular/router';
 import { SignupChooseComponent } from './components/signup-choose/signup-choose.component';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
+import { RippleModule } from 'primeng/ripple';
 
 @NgModule({
   declarations: [
@@ -33,9 +36,11 @@ import { SignupChooseComponent } from './components/signup-choose/signup-choose.
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    RouterOutlet
+    RouterOutlet,
+    ToastModule,
+    RippleModule,
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
