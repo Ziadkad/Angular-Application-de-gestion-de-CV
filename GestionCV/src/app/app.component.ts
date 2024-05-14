@@ -34,8 +34,8 @@ export class AppComponent {
     //     skills: [],
     //     role: Roles.CANDIDATE
     // })
-    this.auth.signUpAsCompany(this.company).subscribe(data=>{
-      console.log(data);
-    })
+    // this.auth.signUpAsCompany(this.company).subscribe(data=>{
+    //   console.log(data);
+    // })
   }
 }

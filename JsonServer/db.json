@@ -58,14 +58,6 @@
       "password": "xyz#456",
       "capital": 500000,
       "role": "COMPANY"
-    },
-    {
-      "id": 35877,
-      "nom": "string",
-      "email": "string",
-      "password": "string",
-      "capital": 100000000,
-      "role": 1
     }
   ],
   "jobOffers": [
