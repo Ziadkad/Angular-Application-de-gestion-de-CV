@@ -17,6 +17,7 @@ import { SignupChooseComponent } from './components/signup-choose/signup-choose.
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { RippleModule } from 'primeng/ripple';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { RippleModule } from 'primeng/ripple';
     RouterOutlet,
     ToastModule,
     RippleModule,
+    BrowserAnimationsModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

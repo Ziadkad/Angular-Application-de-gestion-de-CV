@@ -64,8 +64,7 @@ export class SigninComponent {
     if (this.myForm.valid) {
       this.authservice.logIn(this.myForm.value.email, this.myForm.value.password);
       if(!this.authservice.isAuthenticated){
-        alert("Wrong");
-        // this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Message Content' });
+        this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Wrong credintials' });
       }
     }
     
