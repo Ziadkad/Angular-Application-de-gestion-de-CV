@@ -58,6 +58,14 @@
       "password": "xyz#456",
       "capital": 500000,
       "role": "COMPANY"
+    },
+    {
+      "id": 35877,
+      "nom": "string",
+      "email": "string",
+      "password": "string",
+      "capital": 100000000,
+      "role": 1
     }
   ],
   "jobOffers": [
@@ -88,12 +96,14 @@
     {
       "jobOffers_id": "1",
       "candidate_id": "12345",
-      "Date": "2024-05-13"
+      "Date": "2024-05-13",
+      "id": "4a26"
     },
     {
       "jobOffers_id": "2",
       "candidate_id": "67890",
-      "Date": "2024-05-14"
+      "Date": "2024-05-14",
+      "id": "b541"
     }
   ]
 }
