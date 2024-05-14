@@ -78,7 +78,7 @@ export class AuthService {
 
   signUpAsCandidate(candidates : Candidates){
     return this.http.post(`${this.apiUrl}/candidates`,{
-      id: candidates.id,
+      id: this.generateRandomNumber(1, 200000),
       nom: candidates.nom,
       prenom: candidates.prenom,
       datenaissance: candidates.datenaissance,

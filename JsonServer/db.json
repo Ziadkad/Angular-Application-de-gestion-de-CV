@@ -40,6 +40,61 @@
       "cv": "",
       "skills": [],
       "role": "CANDIDATE"
+    },
+    {
+      "id": 92059,
+      "nom": "ziad",
+      "prenom": "ziad",
+      "datenaissance": "2000-04-26",
+      "email": "ziad@gmail.com",
+      "password": "Ziad2000",
+      "cv": "",
+      "skills": [],
+      "role": 0
+    },
+    {
+      "id": 140027,
+      "nom": "test",
+      "prenom": "test",
+      "datenaissance": "2200-02-21",
+      "email": "inwe2@sad.com",
+      "password": "wwwwW2ww",
+      "cv": "",
+      "skills": [],
+      "role": 0
+    },
+    {
+      "id": 44156,
+      "nom": "testqw",
+      "prenom": "qwqwq",
+      "datenaissance": "222222-02-12",
+      "email": "assa@aaa.aa",
+      "password": "Qwertyu1212",
+      "cv": "",
+      "skills": [],
+      "role": 0
+    },
+    {
+      "id": 138096,
+      "nom": "testqw",
+      "prenom": "qwqwq",
+      "datenaissance": "222222-02-12",
+      "email": "asasasassa@aaa.aa",
+      "password": "Qwertyu1212aA1",
+      "cv": "",
+      "skills": [],
+      "role": 0
+    },
+    {
+      "id": 101941,
+      "nom": "aaaaaaaaa",
+      "prenom": "aaaaaa",
+      "datenaissance": "2024-05-09",
+      "email": "sadasd@assa.aa",
+      "password": "123456Aaqwwqeq",
+      "cv": "",
+      "skills": [],
+      "role": 0
     }
   ],
   "companies": [
@@ -60,7 +115,7 @@
       "role": "COMPANY"
     },
     {
-      "id": 35877,
+      "id": "35877",
       "nom": "string",
       "email": "string",
       "password": "string",

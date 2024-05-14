@@ -47,15 +47,15 @@ export class SigninComponent {
         updateOn: 'blur',
       }
     );
-    this.watchingFormChange$ = this.myForm.valueChanges.pipe(
-      map((formValue) => ({
-        ...formValue,
-        createdDate: new Date(),
-      }))
-    );
-    this.watchingFormChange$.subscribe((data) => {
-      console.log(data);
-    });
+    // this.watchingFormChange$ = this.myForm.valueChanges.pipe(
+    //   map((formValue) => ({
+    //     ...formValue,
+    //     createdDate: new Date(),
+    //   }))
+    // );
+    // this.watchingFormChange$.subscribe((data) => {
+    //   console.log(data);
+    // });
   }
 
   onSubmitForm() {
