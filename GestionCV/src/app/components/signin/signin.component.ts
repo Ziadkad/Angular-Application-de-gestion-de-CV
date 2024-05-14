@@ -65,6 +65,11 @@ export class SigninComponent {
       this.authservice.logIn(this.myForm.value.email, this.myForm.value.password);
       if(!this.authservice.isAuthenticated){
         this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Wrong credintials' });
+      }else{
+        this.messageService.add({ severity: 'Success', summary: 'Success', detail: 'Wrong credintials' });
+        setInterval(()=>{
+          console.log("redirecting ...");
+        },1000)
       }
     }
     
