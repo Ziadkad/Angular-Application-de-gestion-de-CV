@@ -16,6 +16,21 @@
       "role": "CANDIDATE"
     },
     {
+      "id": "9999999",
+      "nom": "Smith",
+      "prenom": "John",
+      "datenaissance": "1990-05-20",
+      "email": "a@a",
+      "password": "1",
+      "cv": "https://example.com/john_smith_cv.pdf",
+      "skills": [
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "role": "CANDIDATE"
+    },
+    {
       "id": "2",
       "nom": "Doe",
       "prenom": "Jane",
@@ -40,61 +55,6 @@
       "cv": "",
       "skills": [],
       "role": "CANDIDATE"
-    },
-    {
-      "id": 92059,
-      "nom": "ziad",
-      "prenom": "ziad",
-      "datenaissance": "2000-04-26",
-      "email": "ziad@gmail.com",
-      "password": "Ziad2000",
-      "cv": "",
-      "skills": [],
-      "role": 0
-    },
-    {
-      "id": 140027,
-      "nom": "test",
-      "prenom": "test",
-      "datenaissance": "2200-02-21",
-      "email": "inwe2@sad.com",
-      "password": "wwwwW2ww",
-      "cv": "",
-      "skills": [],
-      "role": 0
-    },
-    {
-      "id": 44156,
-      "nom": "testqw",
-      "prenom": "qwqwq",
-      "datenaissance": "222222-02-12",
-      "email": "assa@aaa.aa",
-      "password": "Qwertyu1212",
-      "cv": "",
-      "skills": [],
-      "role": 0
-    },
-    {
-      "id": 138096,
-      "nom": "testqw",
-      "prenom": "qwqwq",
-      "datenaissance": "222222-02-12",
-      "email": "asasasassa@aaa.aa",
-      "password": "Qwertyu1212aA1",
-      "cv": "",
-      "skills": [],
-      "role": 0
-    },
-    {
-      "id": 101941,
-      "nom": "aaaaaaaaa",
-      "prenom": "aaaaaa",
-      "datenaissance": "2024-05-09",
-      "email": "sadasd@assa.aa",
-      "password": "123456Aaqwwqeq",
-      "cv": "",
-      "skills": [],
-      "role": 0
     }
   ],
   "companies": [
@@ -648,6 +608,22 @@
       "id": 169353,
       "email": "dqwdwqd@dsadas",
       "password": "dwqd2121d12d",
+      "role": 1
+    },
+    {
+      "id": 142157,
+      "nom": "sadsadsadsa",
+      "email": "dasdas@gmail.com",
+      "password": "d21d1dSADAd21",
+      "capital": 2321321312,
+      "role": 1
+    },
+    {
+      "id": 97779,
+      "nom": "hhhhhhhhhhhhhhhhh",
+      "email": "sss@gmail.com",
+      "password": "ASASsas222",
+      "capital": 222222222222,
       "role": 1
     }
   ],
