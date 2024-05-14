@@ -20,8 +20,6 @@ export class AuthService {
   getAllCompanies(): Observable<any>{
     return this.http.get(`${this.apiUrl}/companies`);
   }
-  private candidates : Candidates[] = []
-  private companies : Companies[] = []
 
   public userinfos: any;
   public isAuthenticated: boolean = false;
@@ -67,16 +65,16 @@ export class AuthService {
     localStorage.removeItem(this.USER_KEY);
   }
 
-  // SignUpAsCompany(company : Companies){
-  //   return this.http.post(`${this.apiUrl}/companies`,{
-  //     id: company.id,
-  //     nom: company.nom,
-  //     email: company.email,
-  //     password: company.password,
-  //     capital: company.capital,
-  //     role : company,
-  //   });
-  // }
+  SignUpAsCompany(company : Companies){
+    return this.http.post(`${this.apiUrl}/companies`,{
+      id: company.id,
+      nom: company.nom,
+      email: company.email,
+      password: company.password,
+      capital: company.capital,
+      role : company,
+    });
+  }
 
   // SignUpAsCandidate(candidates : Candidates){
   //   return this.http.post(`${this.apiUrl}/candidates`,{
