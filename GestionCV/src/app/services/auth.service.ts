@@ -65,26 +65,35 @@ export class AuthService {
     localStorage.removeItem(this.USER_KEY);
   }
 
-  SignUpAsCompany(company : Companies){
+  signUpAsCompany(company : Companies){
     return this.http.post(`${this.apiUrl}/companies`,{
-      id: company.id,
+      id: this.generateRandomNumber(1, 200000),
       nom: company.nom,
       email: company.email,
       password: company.password,
       capital: company.capital,
-      role : company,
+      role : company.role,
     });
   }
 
-  // SignUpAsCandidate(candidates : Candidates){
-  //   return this.http.post(`${this.apiUrl}/candidates`,{
-  //     id: candidates.id,
-  //     nom: candidates.nom,
-  //     email: candidates.email,
-  //     password: candidates.password,
-  //     role : candidates,
-  //   });
-  // }
+  signUpAsCandidate(candidates : Candidates){
+    return this.http.post(`${this.apiUrl}/candidates`,{
+      id: candidates.id,
+      nom: candidates.nom,
+      prenom: candidates.prenom,
+      datenaissance: candidates.datenaissance,
+      email: candidates.email,
+      password: candidates.password,
+      cv: "",
+      skills:[],
+      role : candidates.role,
+    });
+  }
+
+
+   generateRandomNumber(min: number, max: number): number {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
   private changeVariables(item : any):void{
     this.userinfos = item;

@@ -29,6 +29,17 @@
         "SQL"
       ],
       "role": "CANDIDATE"
+    },
+    {
+      "id": "321",
+      "nom": "Doe",
+      "prenom": "John",
+      "datenaissance": "1990-05-15",
+      "email": "john.doe@example.com",
+      "password": "password123",
+      "cv": "",
+      "skills": [],
+      "role": "CANDIDATE"
     }
   ],
   "companies": [
@@ -71,69 +82,6 @@
         "Machine Learning",
         "TensorFlow"
       ]
-    },
-    {
-      "id": 3,
-      "company_id": 3,
-      "description": "",
-      "title": "",
-      "skills_required": []
-    },
-    {
-      "id": 3,
-      "company_id": 3,
-      "description": "",
-      "title": "",
-      "skills_required": []
-    },
-    {
-      "id": 3,
-      "company_id": 3,
-      "description": "",
-      "title": "",
-      "skills_required": []
-    },
-    {
-      "id": 3,
-      "company_id": 3,
-      "description": "",
-      "title": "",
-      "skills_required": []
-    },
-    {
-      "id": 3,
-      "company_id": 3,
-      "description": "",
-      "title": "",
-      "skills_required": []
-    },
-    {
-      "id": 3,
-      "company_id": 3,
-      "description": "",
-      "title": "",
-      "skills_required": []
-    },
-    {
-      "id": 3,
-      "company_id": 3,
-      "description": "",
-      "title": "",
-      "skills_required": []
-    },
-    {
-      "id": 3,
-      "company_id": 3,
-      "description": "",
-      "title": "",
-      "skills_required": []
-    },
-    {
-      "id": 3,
-      "company_id": 3,
-      "description": "",
-      "title": "",
-      "skills_required": []
     }
   ],
   "postulations": [
