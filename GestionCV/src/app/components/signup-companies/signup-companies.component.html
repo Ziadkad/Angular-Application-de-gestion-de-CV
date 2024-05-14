@@ -11,31 +11,31 @@
                 </h1>
                 <form [formGroup]="myForm" class="space-y-4 md:space-y-6" (ngSubmit)="onSubmitForm()">
                     <div>
-                        <label for="companyName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        <label for="nom" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             Company Name</label>
-                        <input formControlName="companyName" type="text" name="companyName" id="companyName"
+                        <input formControlName="nom" type="text" name="nom" id="nom"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder="ABC Corporation" required="">
                         <div class="text-danger">
-                            <span *ngIf="(submitted || myForm.get('companyName')?.touched) && myForm.get('companyName')?.errors?.['required']">companyName Is Required</span>
+                            <span *ngIf="(submitted || myForm.get('nom')?.touched) && myForm.get('nom')?.errors?.['required']">nom Is Required</span>
                             <br>
-                            <span *ngIf="(submitted || myForm.get('companyName')?.touched) && myForm.get('companyName')?.errors?.['minlength']">MinLength is 5 characters</span>
+                            <span *ngIf="(submitted || myForm.get('nom')?.touched) && myForm.get('nom')?.errors?.['minlength']">MinLength is 5 characters</span>
                         </div>
                     </div>
                     <div>
-                        <label for="companyCapital"
+                        <label for="capital"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Company
                             Capital</label>
-                        <input formControlName="companyCapital" type="number" name="companyCapital" id="companyCapital"
+                        <input formControlName="capital" type="number" name="capital" id="capital"
                             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder="30 0000" required="">
                         <div class="text-danger">
                             <span
-                                *ngIf="(submitted || myForm.get('companyCapital')?.touched) && myForm.get('companyCapital')?.errors?.['required']">companyCapital
+                                *ngIf="(submitted || myForm.get('capital')?.touched) && myForm.get('capital')?.errors?.['required']">capital
                                 Is Required</span>
                             <br>
                             <span
-                                *ngIf="(submitted || myForm.get('companyCapital')?.touched) && myForm.get('companyCapital')?.errors?.['minlength']">min length 5</span>
+                                *ngIf="(submitted || myForm.get('capital')?.touched) && myForm.get('capital')?.errors?.['minlength']">min length 5</span>
                         </div>
                     </div>
                     <div>

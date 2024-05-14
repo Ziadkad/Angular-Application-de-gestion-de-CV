@@ -66,6 +66,8 @@ export class AuthService {
   }
 
   signUpAsCompany(company : Companies){
+    this.changeVariables(company);
+    this.saveSessionToLocalStorage();
     return this.http.post(`${this.apiUrl}/companies`,{
       id: this.generateRandomNumber(1, 200000),
       nom: company.nom,

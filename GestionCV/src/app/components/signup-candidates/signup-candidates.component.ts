@@ -4,6 +4,7 @@ import { AuthService } from '../../services/auth.service';
 import { MessageService } from 'primeng/api';
 import { Observable } from 'rxjs';
 import { Roles } from '../../enums/roles';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup-candidates',
@@ -22,7 +23,8 @@ export class SignupCandidatesComponent {
   constructor(
     private formBuilder: FormBuilder,
     private authservice: AuthService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private router:Router
     ) {}
 
     ngOnInit(){
@@ -88,7 +90,9 @@ export class SignupCandidatesComponent {
                       summary: 'Success',
                       detail: 'You have registred succesfully',
                     });
-            console.log("         ")
+                    setInterval(() => {
+                      this.router.navigate([''])
+                    }, 1000);
           }
           )
       }

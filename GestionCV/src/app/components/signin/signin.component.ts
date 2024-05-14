@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { map, Observable } from 'rxjs';
 import { AuthService } from '../../services/auth.service';
 import { MessageService } from 'primeng/api';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -20,7 +21,8 @@ export class SigninComponent {
   constructor(
     private formBuilder: FormBuilder,
     private authservice: AuthService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private router: Router
     ) {}
 
   ngOnInit(): void {
@@ -66,10 +68,10 @@ export class SigninComponent {
       if(!this.authservice.isAuthenticated){
         this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Wrong credintials' });
       }else{
-        this.messageService.add({ severity: 'Success', summary: 'Success', detail: 'Wrong credintials' });
-        setInterval(()=>{
-          console.log("redirecting ...");
-        },1000)
+        this.messageService.add({ severity: 'Success', summary: 'Success', detail: 'Welcome' });
+        setInterval(() => {
+          this.router.navigate([''])
+        }, 1000);
       }
     }
     

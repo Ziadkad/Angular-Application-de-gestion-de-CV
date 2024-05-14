@@ -10,6 +10,7 @@ import { AuthService } from '../../services/auth.service';
 import { MessageService } from 'primeng/api';
 import { uniqueEmailValidator } from '../validators/uniqueEmailValidator';
 import { Roles } from '../../enums/roles';
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup-companies',
@@ -27,21 +28,23 @@ export class SignupCompaniesComponent {
   constructor(
     private formBuilder: FormBuilder,
     private authservice: AuthService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
-    this.emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+    this.emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     this.passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+  
     this.myForm = this.formBuilder.group(
       {
-        companyName: [
+        nom: [
           null,
           {
             Validators: [Validators.required, Validators.minLength(5)],
           },
         ],
-        companyCapital: [
+        capital: [
           null,
           {
             Validators: [Validators.required, Validators.minLength(5)],
@@ -94,7 +97,7 @@ export class SignupCompaniesComponent {
           detail: 'You have registred succesfully',
         });
         setInterval(() => {
-          console.log('redirecting ...');
+          this.router.navigate([''])
         }, 1000);
         // this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Wrong credintials' });
       });

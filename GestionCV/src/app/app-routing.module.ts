@@ -6,15 +6,21 @@ import { SignupCandidatesComponent } from './components/signup-candidates/signup
 
 import { SignupCompaniesComponent } from './components/signup-companies/signup-companies.component';
 import { SignupChooseComponent } from './components/signup-choose/signup-choose.component';
+import { HomeComponent } from './compoments/home/home.component';
+import { authGuard } from './guards/auth.guard';
+import { notAuthGuard } from './guards/not-auth.guard';
+import { roleGuard } from './guards/role.guard';
 
 const routes: Routes = [
-  // {path : "", component: },
-  { path:'signin', component: SigninComponent},
-  { path:'signup', component: SignupComponent, children: [
+  { path:"", component: HomeComponent, canActivate:[authGuard]},
+  { path:'signin', component: SigninComponent,canActivate:[notAuthGuard]},
+  { path:'signup', component: SignupComponent,canActivate:[notAuthGuard], children: [
     { path:'',component: SignupChooseComponent},
     { path:'candidates', component: SignupCandidatesComponent},
     { path:'companies', component: SignupCompaniesComponent},
   ]},
+  // {path:"hamid", component:HamidComponent, canActivate :[roleGuard],
+  // data:{roles:'ADMIN'}}
 ];
 
 @NgModule({

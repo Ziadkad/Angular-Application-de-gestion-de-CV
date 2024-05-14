@@ -18,6 +18,7 @@ import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { RippleModule } from 'primeng/ripple';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './compoments/home/home.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SignupCandidatesComponent,
     SignupCompaniesComponent,
     SignupChooseComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
