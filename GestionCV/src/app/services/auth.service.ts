@@ -27,37 +27,12 @@ export class AuthService {
   public isAuthenticated: boolean = false;
   public roles: string = "";
 
-  // logIn(email:string,password:string):boolean{
-  //   this.getAllCandidates().subscribe(data =>{
-  //     this.candidates=data;
-  //   })
-  //   this.getAllCompanies().subscribe(data =>{
-  //     this.companies=data;
-  //   })
-  //   console.log(this.candidates,this.companies)
-  //   for (const item of this.candidates) {
-  //     if ((email === item.email) && (password === item.password)) {
-  //       this.changeVariables(item);
-  //       this.saveSessionToLocalStorage();
-  //       return true;
-  //     }
-  //   }
-  //   for (const item of this.companies) {
-  //     if ((email === item.email) && (password === item.password)) {
-  //       this.changeVariables(item);
-  //       this.saveSessionToLocalStorage();
-  //       return true;
-  //     }
-  //   }
-  //   return false;
-  // }
   logIn(email: string, password: string): boolean {
     let loggedIn = false
     forkJoin([
       this.getAllCandidates(),
       this.getAllCompanies()
     ]).subscribe(([candidates, companies]) => {
-      console.log(candidates, companies); // Log the fetched data
       for (const item of candidates) {
         if (email === item.email && password === item.password) {
           this.changeVariables(item);
