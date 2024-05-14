@@ -10,6 +10,10 @@ import { SigninComponent } from './components/signin/signin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { SignupCandidatesComponent } from './components/signup-candidates/signup-candidates.component';
+import { SignupCompaniesComponent } from './components/signup-companies/signup-companies.component';
+import { RouterOutlet } from '@angular/router';
+import { SignupChooseComponent } from './components/signup-choose/signup-choose.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,9 @@ import { CommonModule } from '@angular/common';
     FooterComponent,
     SignupComponent,
     SigninComponent,
+    SignupCandidatesComponent,
+    SignupCompaniesComponent,
+    SignupChooseComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +32,8 @@ import { CommonModule } from '@angular/common';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    RouterOutlet
   ],
   providers: [],
   bootstrap: [AppComponent]
