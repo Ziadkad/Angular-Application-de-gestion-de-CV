@@ -12,7 +12,6 @@ import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { OffersComponent } from './components/offers/offers.component';
 import { CandidatesComponent } from './components/candidates/candidates.component';
-import { Roles } from './enums/roles';
 
 const routes: Routes = [
   { path:'', component: HomeComponent},
