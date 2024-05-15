@@ -11,19 +11,23 @@ import { roleGuard } from './guards/role.guard';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { OffersComponent } from './components/offers/offers.component';
+import { CandidatesComponent } from './components/candidates/candidates.component';
 
 const routes: Routes = [
-  { path:'', component: HomeComponent, canActivate:[authGuard]},
+  { path:'', component: HomeComponent},
   { path:'profile', component: ProfileComponent, canActivate:[authGuard]},
   { path:'offers', component: OffersComponent},
+  { path:'candidates', component: CandidatesComponent, canActivate:[authGuard]},
   { path:'signin', component: SigninComponent,canActivate:[notAuthGuard]},
   { path:'signup', component: SignupComponent,canActivate:[notAuthGuard], children: [
     { path:'',component: SignupChooseComponent},
     { path:'candidates', component: SignupCandidatesComponent},
     { path:'companies', component: SignupCompaniesComponent},
   ]},
+  { path:'faq',component: HomeComponent},
+  { path:'contact',component: HomeComponent}
   // {path:"hamid", component:HamidComponent, canActivate :[roleGuard],
-  // data:{roles:'ADMIN'}}
+  // ;}
 ];
 
 @NgModule({

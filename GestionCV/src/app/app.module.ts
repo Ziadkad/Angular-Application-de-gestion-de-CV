@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileComponent } from './components/profile/profile.component';
 import { OffersComponent } from './components/offers/offers.component';
 import { HomeComponent } from './components/home/home.component';
+import { CandidatesComponent } from './components/candidates/candidates.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { HomeComponent } from './components/home/home.component';
     ProfileComponent,
     OffersComponent,
     HomeComponent,
+    CandidatesComponent,
   ],
   imports: [
     BrowserModule,
