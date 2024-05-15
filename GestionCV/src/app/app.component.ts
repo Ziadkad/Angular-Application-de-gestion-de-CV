@@ -16,12 +16,12 @@ import { CrudJobOffersService } from './services/crud-job-offers.service';
 export class AppComponent  {
 
 
-  constructor(private crudPostulationsService: CrdPostulationsService){}
+//   constructor(private crudPostulationsService: CrdPostulationsService){}
 
 
-ngOnInit(): void {
-  this.crudPostulationsService.getByCandidateId('12345').subscribe(data=>console.log(data));
-}
+// ngOnInit(): void {
+//   this.crudPostulationsService.getByCandidateId('12345').subscribe(data=>console.log(data));
+// }
 
   
   // postulation:Postulations =  {

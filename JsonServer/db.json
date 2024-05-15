@@ -955,6 +955,18 @@
       "jobOffers_id": "1",
       "candidate_id": "12345",
       "Date": "2024-05-15T10:54:09.594Z"
+    },
+    {
+      "id": "a4f0",
+      "jobOffers_id": "2",
+      "candidate_id": "9999999",
+      "Date": "2024-05-15T15:00:43.216Z"
+    },
+    {
+      "id": "e719",
+      "jobOffers_id": "2",
+      "candidate_id": "9999999",
+      "Date": "2024-05-15T15:01:27.257Z"
     }
   ]
 }
