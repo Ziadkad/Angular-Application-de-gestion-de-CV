@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { forkJoin, Observable } from 'rxjs';
+import { catchError, forkJoin, map, Observable, of } from 'rxjs';
 import { Candidates } from '../interfaces/candidates';
 import { Companies } from '../interfaces/companies';
 
@@ -25,22 +25,47 @@ export class AuthService {
   public isAuthenticated: boolean = false;
   public roles: string = "";
 
-  logIn(email: string, password: string): boolean {
-    let loggedIn = false
-    forkJoin([
+  // logIn(email: string, password: string): boolean {
+  //   let loggedIn = false
+  //   forkJoin([
+  //     this.getAllCandidates(),
+  //     this.getAllCompanies()
+  //   ]).subscribe(([candidates, companies]) => {
+  //     for (const item of candidates) {
+  //       if (email === item.email && password === item.password) {
+  //         this.changeVariables(item);
+  //         this.saveSessionToLocalStorage();
+  //         loggedIn = true;
+  //         break;
+  //       }
+  //     }
+  //     if (!loggedIn) {
+  //       for (const item of companies) {
+  //         if (email === item.email && password === item.password) {
+  //           this.changeVariables(item);
+  //           this.saveSessionToLocalStorage();
+  //           loggedIn = true;
+  //           break;
+  //         }
+  //       }
+  //     }
+  //     if (!loggedIn) {
+  //       console.log("Login failed");
+  //     }
+  //   }, error => {
+  //     console.error("Error fetching data:", error)
+  //   });
+  //     return loggedIn;
+  // }
+  
+  logIn(email: string, password: string): Observable<boolean> {
+    return forkJoin([
       this.getAllCandidates(),
       this.getAllCompanies()
-    ]).subscribe(([candidates, companies]) => {
-      for (const item of candidates) {
-        if (email === item.email && password === item.password) {
-          this.changeVariables(item);
-          this.saveSessionToLocalStorage();
-          loggedIn = true;
-          break;
-        }
-      }
-      if (!loggedIn) {
-        for (const item of companies) {
+    ]).pipe(
+      map(([candidates, companies]) => {
+        let loggedIn = false;
+        for (const item of candidates) {
           if (email === item.email && password === item.password) {
             this.changeVariables(item);
             this.saveSessionToLocalStorage();
@@ -48,16 +73,26 @@ export class AuthService {
             break;
           }
         }
-      }
-      if (!loggedIn) {
-        console.log("Login failed");
-      }
-    }, error => {
-      console.error("Error fetching data:", error)
-    });
-      return loggedIn;
+        if (!loggedIn) {
+          for (const item of companies) {
+            if (email === item.email && password === item.password) {
+              this.changeVariables(item);
+              this.saveSessionToLocalStorage();
+              loggedIn = true;
+              break;
+            }
+          }
+        }
+        return loggedIn;
+      }),
+      catchError(error => {
+        console.error("Error fetching data:", error);
+        return of(false); // Returning Observable<boolean> with false if there's an error
+      })
+    );
   }
-  
+
+
   logOut():void{
     this.userinfos = null;
     this.isAuthenticated = false;

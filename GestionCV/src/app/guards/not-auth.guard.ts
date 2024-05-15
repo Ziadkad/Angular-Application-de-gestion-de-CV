@@ -8,7 +8,9 @@ export const notAuthGuard: CanActivateFn = (route, state) => {
   if (!authService.isAuthenticated) {
     return true;
   } else {
-    router.createUrlTree(['']);
+    router.navigate(
+      ['']
+    );
     return false;
   }
 };

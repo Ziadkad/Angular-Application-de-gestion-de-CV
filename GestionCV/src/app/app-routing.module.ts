@@ -12,7 +12,7 @@ import { notAuthGuard } from './guards/not-auth.guard';
 import { roleGuard } from './guards/role.guard';
 
 const routes: Routes = [
-  { path:"", component: HomeComponent, canActivate:[authGuard]},
+  { path:'', component: HomeComponent, canActivate:[authGuard]},
   { path:'signin', component: SigninComponent,canActivate:[notAuthGuard]},
   { path:'signup', component: SignupComponent,canActivate:[notAuthGuard], children: [
     { path:'',component: SignupChooseComponent},

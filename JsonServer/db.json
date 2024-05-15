@@ -557,61 +557,61 @@
       "role": 1
     },
     {
-      "id": 75052,
+      "id": "75052",
       "email": "dasdas@gmail.com",
       "password": "21321s21s21s",
       "role": 1
     },
     {
-      "id": 81760,
+      "id": "81760",
       "email": "dasdas@gmail.com",
       "password": "dsadw1d1",
       "role": 1
     },
     {
-      "id": 16416,
+      "id": "16416",
       "email": "dasdas@gmail.com",
       "password": "dsadw1d1",
       "role": 1
     },
     {
-      "id": 193631,
+      "id": "193631",
       "email": "dasdas@gmail.com",
       "password": "dsadw1d1",
       "role": 1
     },
     {
-      "id": 21840,
+      "id": "21840",
       "email": "dasdas@gmail.com",
       "password": "dsadw1d1",
       "role": 1
     },
     {
-      "id": 163109,
+      "id": "163109",
       "email": "dasdas@gmail.com",
       "password": "dsadw1d1",
       "role": 1
     },
     {
-      "id": 124119,
+      "id": "124119",
       "email": "dasdas@gmail.com",
       "password": "dsadw1d1",
       "role": 1
     },
     {
-      "id": 150595,
+      "id": "150595",
       "email": "dasdas@gmail.com",
       "password": "dsadw1d1",
       "role": 1
     },
     {
-      "id": 169353,
+      "id": "169353",
       "email": "dqwdwqd@dsadas",
       "password": "dwqd2121d12d",
       "role": 1
     },
     {
-      "id": 142157,
+      "id": "142157",
       "nom": "sadsadsadsa",
       "email": "dasdas@gmail.com",
       "password": "d21d1dSADAd21",
@@ -619,11 +619,19 @@
       "role": 1
     },
     {
-      "id": 97779,
+      "id": "97779",
       "nom": "hhhhhhhhhhhhhhhhh",
       "email": "sss@gmail.com",
       "password": "ASASsas222",
       "capital": 222222222222,
+      "role": 1
+    },
+    {
+      "id": 173269,
+      "nom": "aaaaa",
+      "email": "a_oufkissssssr@gmail.com",
+      "password": "sdsadasASAS22121",
+      "capital": 222222222,
       "role": 1
     }
   ],
