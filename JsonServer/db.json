@@ -2,18 +2,18 @@
   "candidates": [
     {
       "id": "1",
-      "nom": "Smith",
-      "prenom": "John",
-      "datenaissance": "1990-05-20",
-      "email": "john.smith@example.com",
-      "password": "password123",
+      "nom": "hhhhhhhhhhhh",
+      "prenom": "hhhhhhhhhhhhhhhhhhhh",
+      "datenaissance": "2024-05-15T15:03:08.383Z",
+      "email": "hh@hh",
+      "password": "hh",
       "cv": "https://example.com/john_smith_cv.pdf",
       "skills": [
-        "JavaScript",
-        "React",
-        "Node.js"
+        10,
+        80,
+        12
       ],
-      "role": "CANDIDATE"
+      "role": 0
     },
     {
       "id": "9999999",
