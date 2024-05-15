@@ -1,1 +1,51 @@
-<p>offers works!</p>
+
+<div class="container mx-auto px-12 py-4">
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        Job Title
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Company
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Description
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        skills
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody *ngIf="offers">
+                <tr *ngFor="let item of offers" class="border-b" >
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                        {{item.title}}
+                    </th>
+                    <td class="px-6 py-4">
+                        {{item.company_id}}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{item.description}}
+                    </td>
+                    <td class="px-6 py-4" class="border-b">
+                        <div *ngFor="let skill of item.skills_required">
+                            <span class="text-sm font-medium m-2 px-2.5 py-0.5 rounded bg-gray-700 text-white">{{skill}}</span>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <button  [disabled]="!isAuthenticated" (click)="apply(item.id)" class="font-medium text-blue-600 hover:underline">Apply</button>
+                    </td>
+                    <!-- <td class="px-6 py-4">
+                        <button  class="font-medium text-red-600 hover:underline"></button>
+                    </td> -->
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
