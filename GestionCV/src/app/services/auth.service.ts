@@ -104,7 +104,7 @@ export class AuthService {
     this.changeVariables(company);
     this.saveSessionToLocalStorage();
     return this.http.post(`${this.apiUrl}/companies`,{
-      id: this.generateRandomNumber(1, 200000),
+      id: this.generateRandomNumber(1, 200000).toString,
       nom: company.nom,
       email: company.email,
       password: company.password,
@@ -115,7 +115,7 @@ export class AuthService {
 
   signUpAsCandidate(candidates : Candidates){
     return this.http.post(`${this.apiUrl}/candidates`,{
-      id: this.generateRandomNumber(1, 200000),
+      id: this.generateRandomNumber(1, 200000).toString,
       nom: candidates.nom,
       prenom: candidates.prenom,
       datenaissance: candidates.datenaissance,

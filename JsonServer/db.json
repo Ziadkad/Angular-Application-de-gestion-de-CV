@@ -627,11 +627,35 @@
       "role": 1
     },
     {
-      "id": 173269,
+      "id": "173269",
       "nom": "aaaaa",
       "email": "a_oufkissssssr@gmail.com",
       "password": "sdsadasASAS22121",
       "capital": 222222222,
+      "role": 1
+    },
+    {
+      "id": "d9b1",
+      "nom": "wwwwwww",
+      "email": "a_oufkirsssssssssssssss@gmail.com",
+      "password": "dsadasSDADAS2121",
+      "capital": 2222222222,
+      "role": 1
+    },
+    {
+      "id": "2276",
+      "nom": "dwqdqwdqwdqwdqwd",
+      "email": "a_oufkir@gmail.com",
+      "password": "dwqdwqdDDASDASDA21312",
+      "capital": 12312312312,
+      "role": 1
+    },
+    {
+      "id": "14c3",
+      "nom": "dsadsadasdsa",
+      "email": "a_oufkir@gmail.com",
+      "password": "sadsqdsaDSADASD11231231",
+      "capital": 21321312312,
       "role": 1
     }
   ],
@@ -657,20 +681,280 @@
         "Machine Learning",
         "TensorFlow"
       ]
+    },
+    {
+      "id": "2c91",
+      "company_id": "ABC123",
+      "title": "Software Engineer",
+      "description": "Join our team to develop cutting-edge software solutions.",
+      "skills_required": [
+        10,
+        80,
+        47
+      ]
+    },
+    {
+      "id": "2353",
+      "company_id": "ABC123",
+      "title": "Software Engineer",
+      "description": "Join our team to develop cutting-edge software solutions.",
+      "skills_required": [
+        "AI",
+        "API_DOCUMENTATION",
+        "BIG_DATA"
+      ]
+    },
+    {
+      "id": "22bd",
+      "company_id": "ABC123",
+      "title": "Software Engineer",
+      "description": "Join our team to develop cutting-edge software solutions.",
+      "skills_required": [
+        "AI",
+        "API_DOCUMENTATION",
+        "BIG_DATA"
+      ]
+    },
+    {
+      "id": "863d",
+      "company_id": "ABC123",
+      "title": "Software Engineer",
+      "description": "Join our team to develop cutting-edge software solutions.",
+      "skills_required": [
+        "AI",
+        "API_DOCUMENTATION",
+        "BIG_DATA"
+      ]
+    },
+    {
+      "id": "d3e1",
+      "company_id": "ABC123",
+      "title": "Software Engineer",
+      "description": "Join our team to develop cutting-edge software solutions.",
+      "skills_required": [
+        "AI",
+        "API_DOCUMENTATION",
+        "BIG_DATA"
+      ]
+    },
+    {
+      "id": "2dd9",
+      "company_id": "ABC123",
+      "title": "Software Engineer",
+      "description": "Join our team to develop cutting-edge software solutions.",
+      "skills_required": [
+        "AI",
+        "API_DOCUMENTATION",
+        "BIG_DATA"
+      ]
+    },
+    {
+      "id": "b39f",
+      "company_id": "ABC123",
+      "title": "Software Engineer",
+      "description": "Join our team to develop cutting-edge software solutions.",
+      "skills_required": [
+        "AI",
+        "API_DOCUMENTATION",
+        "BIG_DATA"
+      ]
+    },
+    {
+      "id": "017e",
+      "company_id": "ABC123",
+      "title": "Software Engineer",
+      "description": "Join our team to develop cutting-edge software solutions.",
+      "skills_required": [
+        "AI",
+        "API_DOCUMENTATION",
+        "BIG_DATA"
+      ]
+    },
+    {
+      "id": "064b",
+      "company_id": "ABC123",
+      "title": "Software Engineer",
+      "description": "Join our team to develop cutting-edge software solutions.",
+      "skills_required": [
+        "AI",
+        "API_DOCUMENTATION",
+        "BIG_DATA"
+      ]
+    },
+    {
+      "id": "701a",
+      "company_id": "ABC123",
+      "title": "Software Engineer",
+      "description": "Join our team to develop cutting-edge software solutions.",
+      "skills_required": [
+        "AI",
+        "API_DOCUMENTATION",
+        "BIG_DATA"
+      ]
+    },
+    {
+      "id": "ceff",
+      "company_id": "ABC123",
+      "title": "Software Engineer",
+      "description": "Join our team to develop cutting-edge software solutions.",
+      "skills_required": [
+        "AI",
+        "API_DOCUMENTATION",
+        "BIG_DATA"
+      ]
+    },
+    {
+      "id": "89e6",
+      "company_id": "ABC123",
+      "title": "Software Engineer",
+      "description": "Join our team to develop cutting-edge software solutions.",
+      "skills_required": [
+        "AI",
+        "API_DOCUMENTATION",
+        "BIG_DATA"
+      ]
+    },
+    {
+      "id": "15a1",
+      "company_id": "ABC123",
+      "title": "Software Engineer",
+      "description": "Join our team to develop cutting-edge software solutions.",
+      "skills_required": [
+        "AI",
+        "API_DOCUMENTATION",
+        "BIG_DATA"
+      ]
+    },
+    {
+      "id": "d717",
+      "company_id": "ABC123",
+      "title": "Software Engineer",
+      "description": "Join our team to develop cutting-edge software solutions.",
+      "skills_required": [
+        "AI",
+        "API_DOCUMENTATION",
+        "BIG_DATA"
+      ]
+    },
+    {
+      "id": "417e",
+      "company_id": "ABC123",
+      "title": "Software Engineer",
+      "description": "Join our team to develop cutting-edge software solutions.",
+      "skills_required": [
+        "AI",
+        "API_DOCUMENTATION",
+        "BIG_DATA"
+      ]
+    },
+    {
+      "id": "fbd7",
+      "company_id": "ABC123",
+      "title": "Software Engineer",
+      "description": "Join our team to develop cutting-edge software solutions.",
+      "skills_required": [
+        "AI",
+        "API_DOCUMENTATION",
+        "BIG_DATA"
+      ]
     }
   ],
   "postulations": [
     {
+      "id": "4a26",
       "jobOffers_id": "1",
       "candidate_id": "12345",
-      "Date": "2024-05-13",
-      "id": "4a26"
+      "Date": "2024-05-13"
     },
     {
+      "id": "b541",
       "jobOffers_id": "2",
       "candidate_id": "67890",
-      "Date": "2024-05-14",
-      "id": "b541"
+      "Date": "2024-05-14"
+    },
+    {
+      "id": "4a26",
+      "jobOffers_id": "1",
+      "candidate_id": "12345",
+      "Date": "2024-05-13"
+    },
+    {
+      "id": "4a26",
+      "jobOffers_id": "1",
+      "candidate_id": "12345",
+      "Date": "2024-05-13"
+    },
+    {
+      "id": "4a26",
+      "jobOffers_id": "1",
+      "candidate_id": "12345",
+      "Date": "2024-05-13"
+    },
+    {
+      "id": "9fad",
+      "jobOffers_id": "1",
+      "candidate_id": "12345",
+      "Date": "2024-05-15T10:38:59.001Z"
+    },
+    {
+      "id": "66ce",
+      "jobOffers_id": "1",
+      "candidate_id": "12345",
+      "Date": "2024-05-15T10:41:34.029Z"
+    },
+    {
+      "id": "9c1c",
+      "jobOffers_id": "1",
+      "candidate_id": "12345",
+      "Date": "2024-05-15T10:42:30.626Z"
+    },
+    {
+      "id": "1e7c",
+      "jobOffers_id": "1",
+      "candidate_id": "12345",
+      "Date": "2024-05-15T10:42:56.678Z"
+    },
+    {
+      "id": "5d6a",
+      "jobOffers_id": "1",
+      "candidate_id": "12345",
+      "Date": "2024-05-15T10:43:39.134Z"
+    },
+    {
+      "id": "a145",
+      "jobOffers_id": "1",
+      "candidate_id": "12345",
+      "Date": "2024-05-15T10:44:11.383Z"
+    },
+    {
+      "id": "0046",
+      "jobOffers_id": "1",
+      "candidate_id": "12345",
+      "Date": "2024-05-15T10:44:13.243Z"
+    },
+    {
+      "id": "90b1",
+      "jobOffers_id": "1",
+      "candidate_id": "12345",
+      "Date": "2024-05-15T10:45:29.006Z"
+    },
+    {
+      "id": "a065",
+      "jobOffers_id": "1",
+      "candidate_id": "12345",
+      "Date": "2024-05-15T10:45:32.901Z"
+    },
+    {
+      "id": "b27d",
+      "jobOffers_id": "1",
+      "candidate_id": "12345",
+      "Date": "2024-05-15T10:45:33.534Z"
+    },
+    {
+      "id": "b267",
+      "jobOffers_id": "1",
+      "candidate_id": "12345",
+      "Date": "2024-05-15T10:54:09.594Z"
     }
   ]
 }
