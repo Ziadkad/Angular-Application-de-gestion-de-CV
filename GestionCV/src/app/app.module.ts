@@ -12,13 +12,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { SignupCandidatesComponent } from './components/signup-candidates/signup-candidates.component';
 import { SignupCompaniesComponent } from './components/signup-companies/signup-companies.component';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { SignupChooseComponent } from './components/signup-choose/signup-choose.component';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { RippleModule } from 'primeng/ripple';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './compoments/home/home.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { OffersComponent } from './components/offers/offers.component';
+import { HomeComponent } from './components/home/home.component';
+import { CandidatesComponent } from './components/candidates/candidates.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { HomeComponent } from './compoments/home/home.component';
     SignupCandidatesComponent,
     SignupCompaniesComponent,
     SignupChooseComponent,
+    ProfileComponent,
+    OffersComponent,
     HomeComponent,
+    CandidatesComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +45,7 @@ import { HomeComponent } from './compoments/home/home.component';
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
+    RouterModule,
     RouterOutlet,
     ToastModule,
     RippleModule,

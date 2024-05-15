@@ -86,25 +86,21 @@
       // });
     }
 
-    onSubmitForm() {
-      this.submitted = true;
-      if (this.myForm.valid) {
-        this.authservice.signUpAsCompany(this.myForm.value).subscribe((data) => {
-          console.log(data);
-          this.messageService.add({
-            severity: 'Success',
-            summary: 'Success',
-            detail: 'You have registred succesfully',
-          });
-          setInterval(() => {
-            this.router.navigate([''])
-          }, 1000);
-          // this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Wrong credintials' });
+  onSubmitForm() {
+    this.submitted = true;
+    if (this.myForm.valid) {
+      this.authservice.signUpAsCompany(this.myForm.value).subscribe((data) => {
+        console.log(data);
+        this.messageService.add({
+          severity: 'Success',
+          summary: 'Success',
+          detail: 'You have registred succesfully',
         });
-      }
-      else{
-        this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Your Email Is already registred' });
-        this.myForm.reset();
-      }
+          setTimeout(() => {
+            this.router.navigate(['']);
+        }, 1000);
+        // this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Wrong credintials' });
+      });
     }
   }
+}
