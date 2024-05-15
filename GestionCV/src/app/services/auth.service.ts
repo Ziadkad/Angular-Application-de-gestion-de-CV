@@ -127,6 +127,18 @@ export class AuthService {
     });
   }
 
+  updateCandidateSession(updatedCandidate: Candidates): Observable<Candidates> {
+    // Assuming here that you want to update some user information
+    // In a real-world scenario, you would make an HTTP request to update the user's session
+    // For now, just returning the updated candidate as observable
+    return new Observable(observer => {
+      this.userinfos = updatedCandidate;
+      this.saveSessionToLocalStorage();
+      observer.next(updatedCandidate);
+      observer.complete();
+    });
+  }
+
 
    generateRandomNumber(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
