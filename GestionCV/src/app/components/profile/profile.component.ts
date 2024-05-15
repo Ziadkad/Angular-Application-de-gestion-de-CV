@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Skills } from '../../enums/skills';
 
 @Component({
   selector: 'app-profile',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent {
-
+    
 }
