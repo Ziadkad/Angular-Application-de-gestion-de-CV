@@ -7,6 +7,7 @@ import { CrdPostulationsService } from './services/crd-postulations.service';
 import { JobOffers } from './interfaces/job-offers';
 import { Skills } from './enums/skills';
 import { CrudJobOffersService } from './services/crud-job-offers.service';
+import { CrudCandidatesService } from './services/crud-candidates.service';
 
 @Component({
   selector: 'app-root',
@@ -16,11 +17,25 @@ import { CrudJobOffersService } from './services/crud-job-offers.service';
 export class AppComponent  {
 
 
-  constructor(private crudPostulationsService: CrdPostulationsService){}
+  constructor(private crudCandidates: CrudCandidatesService, private authservice: AuthService){}
 
 
 ngOnInit(): void {
-  this.crudPostulationsService.getByCandidateId('12345').subscribe(data=>console.log(data));
+  this.crudCandidates.updateCandidateAndSession( {
+    "id": 1,
+    "nom": "hhhhhhhhhhhh",
+    "prenom": "hhhhhhhhhhhhhhhhhhhh",
+    "datenaissance": new Date(),
+    "email": "hh@hh",
+    "password": "hh",
+    "cv": "https://example.com/john_smith_cv.pdf",
+    "skills": [
+      Skills.AI,
+      Skills.API_DOCUMENTATION,
+      Skills.CLOUD_COMPUTING
+    ],
+    "role": Roles.CANDIDATE
+  },).subscribe(data=>console.log(data))
 }
 
   
