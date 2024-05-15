@@ -20,23 +20,23 @@ export class AppComponent  {
   constructor(private crudCandidates: CrudCandidatesService, private authservice: AuthService){}
 
 
-ngOnInit(): void {
-  this.crudCandidates.updateCandidateAndSession( {
-    "id": 1,
-    "nom": "hhhhhhhhhhhh",
-    "prenom": "hhhhhhhhhhhhhhhhhhhh",
-    "datenaissance": new Date(),
-    "email": "hh@hh",
-    "password": "hh",
-    "cv": "https://example.com/john_smith_cv.pdf",
-    "skills": [
-      Skills.AI,
-      Skills.API_DOCUMENTATION,
-      Skills.CLOUD_COMPUTING
-    ],
-    "role": Roles.CANDIDATE
-  },).subscribe(data=>console.log(data))
-}
+// ngOnInit(): void {
+//   this.crudCandidates.updateCandidateAndSession( {
+//     "id": 1,
+//     "nom": "hhhhhhhhhhhh",
+//     "prenom": "hhhhhhhhhhhhhhhhhhhh",
+//     "datenaissance": new Date(),
+//     "email": "hh@hh",
+//     "password": "hh",
+//     "cv": "https://example.com/john_smith_cv.pdf",
+//     "skills": [
+//       Skills.AI,
+//       Skills.API_DOCUMENTATION,
+//       Skills.CLOUD_COMPUTING
+//     ],
+//     "role": Roles.CANDIDATE
+//   },).subscribe(data=>console.log(data))
+// }
 
   
   // postulation:Postulations =  {
