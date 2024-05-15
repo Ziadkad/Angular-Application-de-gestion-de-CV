@@ -69,8 +69,8 @@ export class SigninComponent {
           this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Wrong credintials' });
         }else{
           this.messageService.add({ severity: 'Success', summary: 'Success', detail: 'Welcome' });
-          setInterval(() => {
-            this.router.navigate([''])
+          setTimeout(() => {
+            this.router.navigate(['']);
           }, 1000);
         }
       });

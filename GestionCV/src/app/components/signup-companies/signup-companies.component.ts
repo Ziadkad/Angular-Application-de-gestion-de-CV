@@ -96,8 +96,8 @@ export class SignupCompaniesComponent {
           summary: 'Success',
           detail: 'You have registred succesfully',
         });
-        setInterval(() => {
-          this.router.navigate([''])
+          setTimeout(() => {
+            this.router.navigate(['']);
         }, 1000);
         // this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Wrong credintials' });
       });

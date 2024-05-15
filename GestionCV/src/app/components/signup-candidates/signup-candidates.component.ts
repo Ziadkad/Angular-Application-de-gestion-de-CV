@@ -90,9 +90,9 @@ export class SignupCandidatesComponent {
                       summary: 'Success',
                       detail: 'You have registred succesfully',
                     });
-                    setInterval(() => {
-                      this.router.navigate([''])
-                    }, 1000);
+                    setTimeout(() => {
+                      this.router.navigate(['']);
+                  }, 1000);
           }
           )
       }

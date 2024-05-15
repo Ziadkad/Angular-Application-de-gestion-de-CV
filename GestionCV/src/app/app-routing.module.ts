@@ -18,7 +18,7 @@ const routes: Routes = [
   { path:'', component: HomeComponent},
   { path:'profile', component: ProfileComponent, canActivate:[authGuard]},
   { path:'offers', component: OffersComponent},
-  { path:'candidates', component: CandidatesComponent, canActivate:[authGuard,roleGuard], data:{roles: Roles.COMPANY}},
+  { path:'candidates', component: CandidatesComponent, canActivate:[authGuard,roleGuard], data:{roles: ['COMPANY']}},
   { path:'signin', component: SigninComponent,canActivate:[notAuthGuard]},
   { path:'signup', component: SignupComponent,canActivate:[notAuthGuard], children: [
     { path:'',component: SignupChooseComponent},
