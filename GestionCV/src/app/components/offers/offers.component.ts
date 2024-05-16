@@ -26,21 +26,35 @@ export class OffersComponent {
     this.fetchJobOffersAndCheckApplied();
     this.isAuthenticated=this.authService.isAuthenticated;
   }
+
+  
+
   fetchJobOffersAndCheckApplied(): void {
     this.crudJobOffersService.getAllJobOffers().pipe(
       switchMap(offers => {
-        // For each offer, add a 'type' property indicating whether it's applied or not
-        return forkJoin(
-          offers.map(offer => {
-            return this.crdPostulationsService.getAllPostulations().pipe(
-              map(postulations => ({
-                ...offer,
-                type: postulations.some((postulation: Postulations) =>
-                  this.isAuthenticated &&
-                  postulation.jobOffers_id === offer.id &&
-                  postulation.candidate_id === this.authService.userinfos.id
-                ) ? 'applied' : 'not applied'
-              }))
+        // Fetch company details for each offer
+        const companyRequests = offers.map(offer => {
+          return this.crudCompaniesService.getCompaniesById(offer.company_id).pipe(
+            map(company => ({ ...offer, companyName: company.nom }))
+          );
+        });
+  
+        return forkJoin(companyRequests).pipe(
+          switchMap(offersWithCompany => {
+            // For each offer, add a 'type' property indicating whether it's applied or not
+            return forkJoin(
+              offersWithCompany.map(offer => {
+                return this.crdPostulationsService.getAllPostulations().pipe(
+                  map(postulations => ({
+                    ...offer,
+                    type: postulations.some((postulation: Postulations) =>
+                      this.isAuthenticated &&
+                      postulation.jobOffers_id === offer.id &&
+                      postulation.candidate_id === this.authService.userinfos.id
+                    ) ? 'applied' : 'not applied'
+                  }))
+                );
+              })
             );
           })
         );
@@ -55,7 +69,7 @@ export class OffersComponent {
       }
     );
   }
-  
+
 
   apply(id : string){
     this.crdPostulationsService.createPostulation({

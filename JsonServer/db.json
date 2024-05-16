@@ -662,7 +662,7 @@
   "jobOffers": [
     {
       "id": "1",
-      "company_id": "ABC123",
+      "company_id": "1",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -673,7 +673,7 @@
     },
     {
       "id": "2",
-      "company_id": "XYZ456",
+      "company_id": "1",
       "title": "Data Scientist",
       "description": "Exciting opportunity for a data scientist to work on challenging projects.",
       "skills_required": [
@@ -684,7 +684,7 @@
     },
     {
       "id": "2c91",
-      "company_id": "ABC123",
+      "company_id": "1",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -695,7 +695,7 @@
     },
     {
       "id": "2353",
-      "company_id": "ABC123",
+      "company_id": "1",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -706,7 +706,7 @@
     },
     {
       "id": "22bd",
-      "company_id": "ABC123",
+      "company_id": "1",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -717,7 +717,7 @@
     },
     {
       "id": "863d",
-      "company_id": "ABC123",
+      "company_id": "1",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -728,7 +728,7 @@
     },
     {
       "id": "d3e1",
-      "company_id": "ABC123",
+      "company_id": "2",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -739,7 +739,7 @@
     },
     {
       "id": "2dd9",
-      "company_id": "ABC123",
+      "company_id": "1",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -750,7 +750,7 @@
     },
     {
       "id": "b39f",
-      "company_id": "ABC123",
+      "company_id": "1",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -761,7 +761,7 @@
     },
     {
       "id": "017e",
-      "company_id": "ABC123",
+      "company_id": "1",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -772,7 +772,7 @@
     },
     {
       "id": "064b",
-      "company_id": "ABC123",
+      "company_id": "1",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -783,7 +783,7 @@
     },
     {
       "id": "701a",
-      "company_id": "ABC123",
+      "company_id": "1",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -794,7 +794,7 @@
     },
     {
       "id": "ceff",
-      "company_id": "ABC123",
+      "company_id": "1",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -805,7 +805,7 @@
     },
     {
       "id": "89e6",
-      "company_id": "ABC123",
+      "company_id": "1",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -816,7 +816,7 @@
     },
     {
       "id": "15a1",
-      "company_id": "ABC123",
+      "company_id": "1",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -827,7 +827,7 @@
     },
     {
       "id": "d717",
-      "company_id": "ABC123",
+      "company_id": "1",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -838,7 +838,7 @@
     },
     {
       "id": "417e",
-      "company_id": "ABC123",
+      "company_id": "1",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -849,7 +849,7 @@
     },
     {
       "id": "fbd7",
-      "company_id": "ABC123",
+      "company_id": "1",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -973,6 +973,18 @@
       "jobOffers_id": "2",
       "candidate_id": "9999999",
       "Date": "2024-05-16T08:42:04.103Z"
+    },
+    {
+      "id": "26859",
+      "jobOffers_id": "1",
+      "candidate_id": "9999999",
+      "Date": "2024-05-16T08:43:58.613Z"
+    },
+    {
+      "id": "151270",
+      "jobOffers_id": "2c91",
+      "candidate_id": "9999999",
+      "Date": "2024-05-16T08:43:59.887Z"
     }
   ]
 }
