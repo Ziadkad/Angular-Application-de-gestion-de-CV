@@ -7,5 +7,14 @@ import { Skills } from '../../enums/skills';
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent {
+    public dropdown: boolean = false;
+
+    ngOnInit() : void{
+      
+    }
+    skillsEnums = Object.keys(Skills).filter(k => typeof Skills[k as any] === "number");
     
+    dropdownFunc(){
+      this.dropdown = !this.dropdown;
+    }
 }

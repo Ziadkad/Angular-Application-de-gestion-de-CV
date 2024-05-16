@@ -15,7 +15,6 @@ export class NavbarComponent {
   ){}
   public isAuthenticated: boolean = false;
   public mobile: boolean = false;
-  public dropdown: boolean = false;
   public infos:any;
   public roles!:string;
   ngDoCheck(){
@@ -23,7 +22,6 @@ export class NavbarComponent {
     this.roles=this.authService.roles;
     this.isAuthenticated=this.authService.isAuthenticated;
     if(!this.isAuthenticated){
-    this.dropdown=false;
     this.mobile=false;
   }
   }
@@ -34,7 +32,5 @@ export class NavbarComponent {
   mobileFunc(){
     this.mobile = !this.mobile;
   }
-  dropdownFunc(){
-    this.dropdown = !this.dropdown;
-  }
+
 }
