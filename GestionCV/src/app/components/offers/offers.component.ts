@@ -4,6 +4,8 @@ import { JobOffers } from '../../interfaces/job-offers';
 import { AuthService } from '../../services/auth.service';
 import { CrdPostulationsService } from '../../services/crd-postulations.service';
 import { Postulations } from '../../interfaces/postulations';
+import { forkJoin, map, switchMap } from 'rxjs';
+import { CrudCompaniesService } from '../../services/crud-companies.service';
 
 @Component({
   selector: 'app-offers',
@@ -15,6 +17,7 @@ export class OffersComponent {
     private crudJobOffersService : CrudJobOffersService,
     private authService: AuthService,
     private crdPostulationsService : CrdPostulationsService,
+    private crudCompaniesService: CrudCompaniesService,
   ){
   }
   offers!: any[];
@@ -24,24 +27,35 @@ export class OffersComponent {
     this.isAuthenticated=this.authService.isAuthenticated;
   }
   fetchJobOffersAndCheckApplied(): void {
-    this.crudJobOffersService.getAllJobOffers().subscribe(offers => {
-      this.offers = offers.map(offer => ({ ...offer, type: 'not applied' }));
-      this.crdPostulationsService.getAllPostulations().subscribe(postulations => {
-        // Check if each job offer is applied
-        for (const offer of this.offers) {
-          const applied = postulations.some((postulation: Postulations) => {
-            if(this.isAuthenticated){
-            return postulation.jobOffers_id === offer.id && postulation.candidate_id === this.authService.userinfos.id;
-            }
-            else return null
-          });
-          if (applied) {
-            offer.type = 'applied';
-          }
-        }
-      });
-    });
+    this.crudJobOffersService.getAllJobOffers().pipe(
+      switchMap(offers => {
+        // For each offer, add a 'type' property indicating whether it's applied or not
+        return forkJoin(
+          offers.map(offer => {
+            return this.crdPostulationsService.getAllPostulations().pipe(
+              map(postulations => ({
+                ...offer,
+                type: postulations.some((postulation: Postulations) =>
+                  this.isAuthenticated &&
+                  postulation.jobOffers_id === offer.id &&
+                  postulation.candidate_id === this.authService.userinfos.id
+                ) ? 'applied' : 'not applied'
+              }))
+            );
+          })
+        );
+      })
+    ).subscribe(
+      offers => {
+        this.offers = offers;
+      },
+      error => {
+        // Handle error
+        console.error('Error fetching job offers:', error);
+      }
+    );
   }
+  
 
   apply(id : string){
     this.crdPostulationsService.createPostulation({
