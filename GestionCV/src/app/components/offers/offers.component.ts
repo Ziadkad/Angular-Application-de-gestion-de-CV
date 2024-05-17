@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { CrudJobOffersService } from '../../services/crud-job-offers.service';
-import { JobOffers } from '../../interfaces/job-offers';
 import { AuthService } from '../../services/auth.service';
 import { CrdPostulationsService } from '../../services/crd-postulations.service';
 import { Postulations } from '../../interfaces/postulations';
 import { forkJoin, map, switchMap } from 'rxjs';
 import { CrudCompaniesService } from '../../services/crud-companies.service';
-import { Roles } from '../../enums/roles';
 
 @Component({
   selector: 'app-offers',
