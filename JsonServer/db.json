@@ -22,7 +22,7 @@
       "datenaissance": "2024-05-17",
       "email": "a@a",
       "password": "1",
-      "cv": "assets/images/beams.jpg",
+      "cv": "assets/images/videoframe_3381517.png",
       "skills": [
         "JavaScript",
         "React",
@@ -31,7 +31,7 @@
         "DEBUGGING",
         "AI"
       ],
-      "role": "CANDIDATE"
+      "role": 0
     },
     {
       "id": "a2fb",
