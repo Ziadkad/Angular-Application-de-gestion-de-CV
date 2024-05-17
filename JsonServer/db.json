@@ -673,17 +673,6 @@
   ],
   "jobOffers": [
     {
-      "id": "1",
-      "company_id": "1",
-      "title": "Software Engineer",
-      "description": "Join our team to develop cutting-edge software solutions.",
-      "skills_required": [
-        "Java",
-        "Spring",
-        "Hibernate"
-      ]
-    },
-    {
       "id": "2",
       "company_id": "1",
       "title": "Data Scientist",
@@ -692,50 +681,6 @@
         "Python",
         "Machine Learning",
         "TensorFlow"
-      ]
-    },
-    {
-      "id": "2c91",
-      "company_id": "1",
-      "title": "Software Engineer",
-      "description": "Join our team to develop cutting-edge software solutions.",
-      "skills_required": [
-        10,
-        80,
-        47
-      ]
-    },
-    {
-      "id": "2353",
-      "company_id": "1",
-      "title": "Software Engineer",
-      "description": "Join our team to develop cutting-edge software solutions.",
-      "skills_required": [
-        "AI",
-        "API_DOCUMENTATION",
-        "BIG_DATA"
-      ]
-    },
-    {
-      "id": "22bd",
-      "company_id": "1",
-      "title": "Software Engineer",
-      "description": "Join our team to develop cutting-edge software solutions.",
-      "skills_required": [
-        "AI",
-        "API_DOCUMENTATION",
-        "BIG_DATA"
-      ]
-    },
-    {
-      "id": "863d",
-      "company_id": "1",
-      "title": "Software Engineer",
-      "description": "Join our team to develop cutting-edge software solutions.",
-      "skills_required": [
-        "AI",
-        "API_DOCUMENTATION",
-        "BIG_DATA"
       ]
     },
     {
@@ -828,39 +773,6 @@
     },
     {
       "id": "15a1",
-      "company_id": "1",
-      "title": "Software Engineer",
-      "description": "Join our team to develop cutting-edge software solutions.",
-      "skills_required": [
-        "AI",
-        "API_DOCUMENTATION",
-        "BIG_DATA"
-      ]
-    },
-    {
-      "id": "d717",
-      "company_id": "1",
-      "title": "Software Engineer",
-      "description": "Join our team to develop cutting-edge software solutions.",
-      "skills_required": [
-        "AI",
-        "API_DOCUMENTATION",
-        "BIG_DATA"
-      ]
-    },
-    {
-      "id": "417e",
-      "company_id": "1",
-      "title": "Software Engineer",
-      "description": "Join our team to develop cutting-edge software solutions.",
-      "skills_required": [
-        "AI",
-        "API_DOCUMENTATION",
-        "BIG_DATA"
-      ]
-    },
-    {
-      "id": "fbd7",
       "company_id": "1",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",

@@ -21,10 +21,6 @@ export class CrudJobOffersService {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  getDataPerPage(pageNumber: number): Observable<JobOffers[]> {
-    const url = `${this.apiUrl}?_page=${pageNumber}&_limit=${this.limit}`;
-    return this.http.get<JobOffers[]>(url);
-  }
 
   createJobOffer(jobOffer: JobOffers): Observable<JobOffers> {
     // convert skills numbers to string
@@ -44,6 +40,9 @@ export class CrudJobOffersService {
 
   getJobOfferById(id: string): Observable<JobOffers> {
     return this.http.get<JobOffers>(`${this.apiUrl}/${id}`);
+  }
+  getJobOfferByCompanyId(id: string): Observable<JobOffers> {
+    return this.http.get<JobOffers>(`${this.apiUrl}?company_id=${id}`);
   }
 
   updateJobOffer(jobOffer: JobOffers): Observable<JobOffers> {
