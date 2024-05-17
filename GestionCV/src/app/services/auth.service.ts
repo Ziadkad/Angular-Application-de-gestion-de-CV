@@ -101,8 +101,6 @@ export class AuthService {
   }
 
   signUpAsCompany(company : Companies){
-    this.changeVariables(company);
-    this.saveSessionToLocalStorage();
     return this.http.post(`${this.apiUrl}/companies`,{
       id: this.generateRandomNumber(1, 200000).toString,
       nom: company.nom,
@@ -144,7 +142,7 @@ export class AuthService {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  private changeVariables(item : any):void{
+   changeVariables(item : any):void{
     this.userinfos = item;
     this.isAuthenticated = true;
     this.roles = item.role;
@@ -158,7 +156,7 @@ export class AuthService {
       this.roles = roles;
     }
   }
-  private saveSessionToLocalStorage(): void {
+     saveSessionToLocalStorage(): void {
     const sessionData = {
       userSession: this.userinfos,
       isAuthenticated: this.isAuthenticated,

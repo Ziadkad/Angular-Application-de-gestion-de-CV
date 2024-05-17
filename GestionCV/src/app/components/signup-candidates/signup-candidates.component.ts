@@ -91,6 +91,8 @@ export class SignupCandidatesComponent {
                       detail: 'You have registred succesfully',
                     });
                     setTimeout(() => {
+                      this.authservice.changeVariables(this.myForm.value)
+                      this.authservice.saveSessionToLocalStorage();
                       this.router.navigate(['']);
                   }, 1000);
           }

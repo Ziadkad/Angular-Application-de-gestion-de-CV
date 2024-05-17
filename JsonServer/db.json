@@ -17,44 +17,30 @@
     },
     {
       "id": "9999999",
-      "nom": "Smith",
-      "prenom": "John",
-      "datenaissance": "1990-05-20",
+      "nom": "aaaaa",
+      "prenom": "aaaaaaa",
+      "datenaissance": "2024-05-17",
       "email": "a@a",
       "password": "1",
       "cv": "https://example.com/john_smith_cv.pdf",
       "skills": [
         "JavaScript",
         "React",
-        "Node.js"
+        "Node.js",
+        "ALGORITHMS"
       ],
-      "role": "CANDIDATE"
+      "role": 0
     },
     {
-      "id": "2",
-      "nom": "Doe",
-      "prenom": "Jane",
-      "datenaissance": "1988-10-15",
-      "email": "jane.doe@example.com",
-      "password": "qwerty456",
-      "cv": "https://example.com/jane_doe_cv.pdf",
-      "skills": [
-        "Python",
-        "Django",
-        "SQL"
-      ],
-      "role": "CANDIDATE"
-    },
-    {
-      "id": "321",
-      "nom": "Doe",
-      "prenom": "John",
-      "datenaissance": "1990-05-15",
-      "email": "john.doe@example.com",
-      "password": "password123",
+      "id": "a2fb",
+      "nom": "hamid",
+      "prenom": "s9ali",
+      "datenaissance": "2024-05-17",
+      "email": "a@gmail.com",
+      "password": "Hsahkldbashdsahdas21321321sadSADAS",
       "cv": "",
       "skills": [],
-      "role": "CANDIDATE"
+      "role": 0
     }
   ],
   "companies": [
@@ -656,6 +642,22 @@
       "email": "a_oufkir@gmail.com",
       "password": "sadsqdsaDSADASD11231231",
       "capital": 21321312312,
+      "role": 1
+    },
+    {
+      "id": "6180",
+      "nom": "dwqdwqdqwd",
+      "email": "sadsad@dsadasd.com",
+      "password": "21312dsSDASd12",
+      "capital": 213123123,
+      "role": 1
+    },
+    {
+      "id": "c74f",
+      "nom": "dsadsadas",
+      "email": "aa@dsadsada.com",
+      "password": "sdsaSADA213131",
+      "capital": 21312312,
       "role": 1
     }
   ],

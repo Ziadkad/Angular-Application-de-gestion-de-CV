@@ -28,4 +28,5 @@ export class CrudCandidatesService {
   deleteCandidate(id: string): Observable<any> {
     return this.http.delete<any>(`${this.apiUrl}/${id}`);
   }
+ 
 }

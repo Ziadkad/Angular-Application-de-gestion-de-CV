@@ -51,7 +51,12 @@
                             <br>
                             <span
                                 *ngIf="(submitted || myForm.get('email')?.touched) && myForm.get('email')?.errors?.['pattern ']">you
-                                didn't match the pattern</span>
+                                didn't match the pattern
+                            </span>
+                            <span
+                                *ngIf="(submitted || myForm.get('email')?.touched) && myForm.get('email')?.errors?.['emailTaken']">you
+                                this email is already taken
+                            </span>
                         </div>
                     </div>
                     <div>

@@ -74,17 +74,10 @@
         {
           updateOn: 'blur',
         }
-      );
-      // this.watchingFormChange$ = this.myForm.valueChanges.pipe(
-      //   map((formValue) => ({
-      //     ...formValue,
-      //     createdDate: new Date(),
-      //   }))
-      // );
-      // this.watchingFormChange$.subscribe((data) => {
-      //   console.log(data);
-      // });
+      );    
     }
+
+  
 
   onSubmitForm() {
     this.submitted = true;
@@ -97,6 +90,8 @@
           detail: 'You have registred succesfully',
         });
           setTimeout(() => {
+            this.authservice.changeVariables(this.myForm.value)
+            this.authservice.saveSessionToLocalStorage();
             this.router.navigate(['']);
         }, 1000);
         // this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Wrong credintials' });
