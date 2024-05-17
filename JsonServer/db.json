@@ -13,7 +13,7 @@
         80,
         12
       ],
-      "role": 0
+      "role": "CANDIDATE"
     },
     {
       "id": "9999999",
@@ -31,7 +31,7 @@
         "DEBUGGING",
         "AI"
       ],
-      "role": 0
+      "role": "CANDIDATE"
     },
     {
       "id": "a2fb",
@@ -981,18 +981,6 @@
       "Date": "2024-05-15T15:08:04.732Z"
     },
     {
-      "id": "26859",
-      "jobOffers_id": "1",
-      "candidate_id": "9999999",
-      "Date": "2024-05-16T08:43:58.613Z"
-    },
-    {
-      "id": "175467",
-      "jobOffers_id": "2353",
-      "candidate_id": "9999999",
-      "Date": "2024-05-17T10:32:42.231Z"
-    },
-    {
       "id": "171883",
       "jobOffers_id": "1",
       "candidate_id": "99999999",
@@ -1015,6 +1003,18 @@
       "jobOffers_id": "2353",
       "candidate_id": "99999999",
       "Date": "2024-05-17T10:43:38.877Z"
+    },
+    {
+      "id": "40791",
+      "jobOffers_id": "2353",
+      "candidate_id": "9999999",
+      "Date": "2024-05-17T11:23:55.079Z"
+    },
+    {
+      "id": "99619",
+      "jobOffers_id": "1",
+      "candidate_id": "9999999",
+      "Date": "2024-05-17T11:28:57.027Z"
     }
   ]
 }

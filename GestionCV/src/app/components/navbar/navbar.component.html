@@ -14,22 +14,6 @@
 
       <!-- dropdown -->
       <div *ngIf="isAuthenticated" class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-        <!-- Dropdown menu -->
-        <!-- <div [ngClass]="{'hidden': !dropdown}" class="z-50 my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow" id="user-dropdown">
-              <div class="px-4 py-3">
-                <span class="block text-sm text-gray-900">{{infos.nom}}</span>
-                <span class="block text-sm  text-gray-500 truncate">{{infos.email}}</span>
-              </div>
-              <ul class="py-2" aria-labelledby="user-menu-button">
-                <li>
-                  <a [routerLink]="['profile']" type="button"  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
-                </li>
-                <li>
-                  <button (click)="signOut()" type="button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</button>
-                </li>
-              </ul>
-            </div> -->
-
         <div class="dropdown dropdown-end">
           <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
             <div class="w-10 rounded-full">
@@ -42,8 +26,14 @@
           <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
             <li > <span class=" text-sm text-gray-900">{{infos.nom}}<div *ngIf="infos.prenom">{{infos.prenom}}</div></span>
             </li>
-            <li>
+            <li *ngIf="roles=='CANDIDATE'">
               <a [routerLink]="['profile']" type="button">Profile</a>
+            </li>
+            <li *ngIf="roles=='COMPANY'">
+              <a [routerLink]="['myoffers']" type="button">My offers</a>
+            </li>
+            <li *ngIf="roles=='COMPANY'">
+              <a [routerLink]="['addoffer']" type="button">Add an offer</a>
             </li>
             <li>
               <button (click)="signOut()" type="button">Sign out</button>
