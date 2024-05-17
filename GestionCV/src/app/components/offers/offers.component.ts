@@ -22,6 +22,8 @@ export class OffersComponent {
   }
   offers!: any[];
   isAuthenticated : boolean = false;
+  search : string =  "";
+
   ngOnInit(){
     this.fetchJobOffersAndCheckApplied();
     this.isAuthenticated=this.authService.isAuthenticated;
@@ -62,6 +64,9 @@ export class OffersComponent {
     ).subscribe(
       offers => {
         this.offers = offers;
+        this.offers = this.offers.filter((item) =>
+          item.companyName.toLowerCase().includes(this.search.toLowerCase()) || item.title.toLowerCase().includes(this.search.toLowerCase())
+      );
       },
       error => {
         // Handle error
