@@ -24,40 +24,6 @@ export class AuthService {
   public userinfos: any;
   public isAuthenticated: boolean = false;
   public roles: string = "";
-
-  // logIn(email: string, password: string): boolean {
-  //   let loggedIn = false
-  //   forkJoin([
-  //     this.getAllCandidates(),
-  //     this.getAllCompanies()
-  //   ]).subscribe(([candidates, companies]) => {
-  //     for (const item of candidates) {
-  //       if (email === item.email && password === item.password) {
-  //         this.changeVariables(item);
-  //         this.saveSessionToLocalStorage();
-  //         loggedIn = true;
-  //         break;
-  //       }
-  //     }
-  //     if (!loggedIn) {
-  //       for (const item of companies) {
-  //         if (email === item.email && password === item.password) {
-  //           this.changeVariables(item);
-  //           this.saveSessionToLocalStorage();
-  //           loggedIn = true;
-  //           break;
-  //         }
-  //       }
-  //     }
-  //     if (!loggedIn) {
-  //       console.log("Login failed");
-  //     }
-  //   }, error => {
-  //     console.error("Error fetching data:", error)
-  //   });
-  //     return loggedIn;
-  // }
-  
   logIn(email: string, password: string): Observable<boolean> {
     return forkJoin([
       this.getAllCandidates(),

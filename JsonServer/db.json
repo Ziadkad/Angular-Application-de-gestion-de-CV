@@ -13,7 +13,7 @@
         80,
         12
       ],
-      "role": 0
+      "role": "CANDIDATE"
     },
     {
       "id": "9999999",
@@ -29,7 +29,7 @@
         "Node.js",
         "ALGORITHMS"
       ],
-      "role": 0
+      "role": "CANDIDATE"
     },
     {
       "id": "a2fb",

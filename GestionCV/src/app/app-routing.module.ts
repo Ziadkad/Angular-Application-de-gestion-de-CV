@@ -12,10 +12,12 @@ import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { OffersComponent } from './components/offers/offers.component';
 import { CandidatesComponent } from './components/candidates/candidates.component';
+import { AddOfferComponent } from './components/add-offer/add-offer.component';
+import { MyOffersComponent } from './components/my-offers/my-offers.component';
 
 const routes: Routes = [
   { path:'', component: HomeComponent},
-  { path:'profile', component: ProfileComponent, canActivate:[authGuard]},
+  { path:'profile', component: ProfileComponent, canActivate:[authGuard,roleGuard], data:{roles: ['CANDIDATE']}},
   { path:'offers', component: OffersComponent},
   { path:'candidates', component: CandidatesComponent, canActivate:[authGuard,roleGuard], data:{roles: ['COMPANY']}},
   { path:'signin', component: SigninComponent,canActivate:[notAuthGuard]},
@@ -24,6 +26,8 @@ const routes: Routes = [
     { path:'candidates', component: SignupCandidatesComponent},
     { path:'companies', component: SignupCompaniesComponent},
   ]},
+  { path:'addoffer', component: AddOfferComponent, canActivate:[authGuard,roleGuard], data:{roles: ['COMPANY']}},
+  { path:'myoffers', component: MyOffersComponent, canActivate:[authGuard,roleGuard], data:{roles: ['COMPANY']}},
   { path:'faq',component: HomeComponent},
   { path:'contact',component: HomeComponent},
 ];
