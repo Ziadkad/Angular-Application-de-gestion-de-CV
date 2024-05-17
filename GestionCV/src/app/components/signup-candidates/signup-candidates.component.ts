@@ -5,6 +5,7 @@ import { MessageService } from 'primeng/api';
 import { Observable } from 'rxjs';
 import { Roles } from '../../enums/roles';
 import { Router } from '@angular/router';
+import { uniqueEmailValidator } from '../validators/uniqueEmailValidator';
 
 @Component({
   selector: 'app-signup-candidates',
@@ -63,6 +64,8 @@ export class SignupCandidatesComponent {
                 Validators.required,
                 Validators.pattern(this.emailRegex),
               ],
+              asyncValidators: [uniqueEmailValidator(this.authservice)],
+              updateOn: 'blur',
             },
           ],
           password: [null, [Validators.required,
