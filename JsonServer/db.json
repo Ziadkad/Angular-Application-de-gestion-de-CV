@@ -22,12 +22,14 @@
       "datenaissance": "2024-05-17",
       "email": "a@a",
       "password": "1",
-      "cv": "https://example.com/john_smith_cv.pdf",
+      "cv": null,
       "skills": [
         "JavaScript",
         "React",
         "Node.js",
-        "ALGORITHMS"
+        "ALGORITHMS",
+        "DEBUGGING",
+        "AI"
       ],
       "role": "CANDIDATE"
     },

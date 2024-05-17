@@ -22,6 +22,7 @@
     watchingFormChange$!: Observable<any>;
     emailRegex!: RegExp;
     passwordRegex!: RegExp;
+    RoleEnumString!:string[]
 
     submitted: boolean = false;
 
@@ -31,8 +32,11 @@
       private messageService: MessageService,
       private router: Router
     ) {}
-
+   
     ngOnInit(): void {
+      this.RoleEnumString = Object.keys(Roles).filter(
+        (k) => typeof Roles[k as any] === 'number'
+      );
       this.emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
       this.passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
     
@@ -69,7 +73,7 @@
             ],
           ],
           id: 0,
-          role: Roles.COMPANY,
+          role: this.RoleEnumString[1],
         },
         {
           updateOn: 'blur',

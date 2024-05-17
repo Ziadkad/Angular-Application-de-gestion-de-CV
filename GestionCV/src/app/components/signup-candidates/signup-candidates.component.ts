@@ -17,6 +17,7 @@ export class SignupCandidatesComponent {
   // watchingFormChange$!: Observable<any>;
   emailRegex: RegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   passwordRegex: RegExp =  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+  RoleEnumString!:string[]
 
   submitted: boolean = false;
 
@@ -29,6 +30,9 @@ export class SignupCandidatesComponent {
     ) {}
 
     ngOnInit(){
+      this.RoleEnumString = Object.keys(Roles).filter(
+        (k) => typeof Roles[k as any] === 'number'
+      );
       this.myForm = this.formBuilder.group(
         {
           nom: [
@@ -75,7 +79,7 @@ export class SignupCandidatesComponent {
           id: 0,
           cv: "",
           skills:[],
-          role : Roles.CANDIDATE,
+          role : this.RoleEnumString[1],
         },
         {
           updateOn: 'blur',
