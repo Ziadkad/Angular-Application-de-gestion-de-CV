@@ -23,15 +23,10 @@ export class OffersComponent {
   }
   offers!: any[];
   isAuthenticated : boolean = false;
-<<<<<<< Updated upstream
   search : string =  "";
   roles : string = "";
 
 
-=======
-  companyNameSearch! : string;
-  titleSearch! : string;
->>>>>>> Stashed changes
   ngOnInit(){
     this.fetchJobOffersAndCheckApplied();
     this.isAuthenticated=this.authService.isAuthenticated;
@@ -82,11 +77,6 @@ export class OffersComponent {
         console.error('Error fetching job offers:', error);
       }
     );
-  }
-
-  filter(){
-    this.offers = this.offers.filter((item) => item.companyName.toLowerCase().includes(this.companyNameSearch.toLowerCase()));
-    this.offers = this.offers.filter((item) => item.title.toLowerCase().includes(this.titleSearch.toLowerCase()));
   }
 
   apply(id : string){
