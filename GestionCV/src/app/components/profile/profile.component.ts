@@ -80,7 +80,7 @@ export class ProfileComponent {
             // Validators.pattern(this.passwordRegex)
           ],
         ],
-        cv: this.fileName,
+        cv: [this.authservice.userinfos.cv, []],
         skills: [
           this.skillsAdded,
           [
@@ -96,6 +96,9 @@ export class ProfileComponent {
     );
   }
   ngDoCheck(): void {
+    if (this.file) {
+      this.myForm.controls['cv'].setValue("assets/images/"+this.file.name);
+    }
     this.skillsAdded = this.authservice.userinfos.skills;
   }
 
@@ -125,60 +128,54 @@ export class ProfileComponent {
 
   onSubmitForm() {
     console.log('invoked');
-    console.log(this.myForm.value.cv);
-    console.log(this.fileName);
-    // if (this.file) {
-    //   // const formData = new FormData();
-    //   this.fileName = "assets/images/"+this.file.name;
+    if (this.file) {
+      // const formData = new FormData();
+      console.log(this.myForm.value);
 
-    //   console.log(this.myForm.value)
+      // formData.append('file', this.file, this.file.name);
 
-    //   // formData.append('file', this.file, this.file.name);
+      // const upload$ = this.http.post("https://httpbin.org/post", formData);
 
-    //   // const upload$ = this.http.post("https://httpbin.org/post", formData);
+      this.status = 'uploading';
 
-    //   this.status = 'uploading';
+      // upload$.subscribe({
+      //   next: () => {
+      //     this.status = 'success';
+      //   },
+      //   error: (error: any) => {
+      //     this.status = 'fail';
+      //     return throwError(() => error);
+      //   },
+      // });
 
-    //   // upload$.subscribe({
-    //   //   next: () => {
-    //   //     this.status = 'success';
-    //   //   },
-    //   //   error: (error: any) => {
-    //   //     this.status = 'fail';
-    //   //     return throwError(() => error);
-    //   //   },
-    //   // });
-
-    //   this.myForm.value.skills = this.skillsAdded
-    //   this.submitted = true;
-    //   if (this.myForm.valid) {
-    //     this.crudCandidate
-    //       .updateCandidateAndSession(this.myForm.value)
-    //       .subscribe((data) => {
-    //         this.messageService.add({
-    //           severity: 'Success',
-    //           summary: 'Success',
-    //           detail: 'updated succesfully',
-    //         });
-    //         this.isEdit=false;
-    //         setTimeout(() => {
-    //           this.router.navigate(['profile']);
-    //         }, 1000);
-    //       });
-    //   }else{
-    //     alert("hhhhhhhhh");
-    //   }
-
-    // }else{
-    //   alert("no file found");
-    // }
+      this.myForm.value.skills = this.skillsAdded;
+      this.submitted = true;
+      if (this.myForm.valid) {
+        this.crudCandidate
+          .updateCandidateAndSession(this.myForm.value)
+          .subscribe((data) => {
+            this.messageService.add({
+              severity: 'Success',
+              summary: 'Success',
+              detail: 'updated succesfully',
+            });
+            this.isEdit = false;
+            setTimeout(() => {
+              this.router.navigate(['profile']);
+            }, 1000);
+          });
+      } else {
+        alert('hhhhhhhhh');
+      }
+    } else {
+      alert('no file found');
+    }
   }
   onChange(event: any) {
     const file: File = event.target.files[0];
     if (file) {
       this.status = 'initial';
       this.file = file;
-      this.fileName = file.name;
     }
   }
 

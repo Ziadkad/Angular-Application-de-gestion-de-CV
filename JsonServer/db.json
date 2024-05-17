@@ -22,7 +22,7 @@
       "datenaissance": "2024-05-17",
       "email": "a@a",
       "password": "1",
-      "cv": null,
+      "cv": "assets/images/beams.jpg",
       "skills": [
         "JavaScript",
         "React",
