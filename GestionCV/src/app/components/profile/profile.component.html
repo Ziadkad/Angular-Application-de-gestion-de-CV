@@ -5,7 +5,7 @@
     <!-- welcom section -->
     <div class="px-4 py-5 sm:px-6 ">
         <h3 class="text-lg  leading-6 font-medium text-gray-900">
-            Welcom,
+            Welcome,
         </h3>
         <p class="mt-1  max-w-2xl text-sm text-gray-500">
             {{userInfos.nom}} {{userInfos.prenom}}
@@ -269,7 +269,26 @@
                         {{userInfos.cv}}
                     </dt>
                     <dt *ngIf="isEdit" class="text-sm font-medium text-gray-500">
-                        <input type="file" class="file-input w-full " />
+                        <input type="file" class="file-input" (change)="onChange($event)" #fileUpload />
+                        <div *ngIf="file">
+                            <section class="file-info">
+                              File details:
+                              <ul>
+                                <li>Name: {{file.name}}</li>
+                                <li>Type: {{file.type}}</li>
+                                <li>Size: {{file.size}} bytes</li>
+                              </ul>
+                            </section>
+                          
+                            <button (click)="onUpload()">Upload the file</button>
+                          
+                            <section [ngSwitch]="status">
+                              <p *ngSwitchCase="'uploading'">⏳ Uploading...</p>
+                              <p *ngSwitchCase="'success'">✅ Done!</p>
+                              <p *ngSwitchCase="'fail'">❌ Error!</p>
+                              <p *ngSwitchDefault>😶 Waiting to upload...</p>
+                            </section>
+                          </div>
                     </dt>
                     <!-- <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                 </dd> -->

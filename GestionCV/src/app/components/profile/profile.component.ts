@@ -15,6 +15,11 @@ import { uniqueEmailValidator } from '../validators/uniqueEmailValidator';
   styleUrl: './profile.component.css',
 })
 export class ProfileComponent {
+
+  status: "initial" | "uploading" | "success" | "fail" = "initial"; // Variable to store file status
+  file: File | null = null; // Variable to store file
+  fileName!:string;
+
   myForm!: FormGroup;
   // watchingFormChange$!: Observable<any>;
   emailRegex: RegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -163,4 +168,40 @@ export class ProfileComponent {
     }
     
   }
+
+  onChange(event: any) {
+    const file: File = event.target.files[0];
+    console.log("assets/images/"+file.name);
+    if (file) {
+      this.status = "initial";
+      this.file = file;
+    }
+  }
+
+  onUpload() {
+    if (this.file) {
+      // const formData = new FormData();
+      this.myForm.value.cv = "assets/images/"+this.file.name;
+
+
+      console.log(this.myForm.value)
+  
+      // formData.append('file', this.file, this.file.name);
+  
+      // const upload$ = this.http.post("https://httpbin.org/post", formData);
+  
+      this.status = 'uploading';
+  
+      // upload$.subscribe({
+      //   next: () => {
+      //     this.status = 'success';
+      //   },
+      //   error: (error: any) => {
+      //     this.status = 'fail';
+      //     return throwError(() => error);
+      //   },
+      // });
+    }
+  }
+
 }
