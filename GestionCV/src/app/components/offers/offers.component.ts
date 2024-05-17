@@ -6,6 +6,7 @@ import { CrdPostulationsService } from '../../services/crd-postulations.service'
 import { Postulations } from '../../interfaces/postulations';
 import { forkJoin, map, switchMap } from 'rxjs';
 import { CrudCompaniesService } from '../../services/crud-companies.service';
+import { Roles } from '../../enums/roles';
 
 @Component({
   selector: 'app-offers',
@@ -23,10 +24,13 @@ export class OffersComponent {
   offers!: any[];
   isAuthenticated : boolean = false;
   search : string =  "";
+  roles : string = "";
+
 
   ngOnInit(){
     this.fetchJobOffersAndCheckApplied();
     this.isAuthenticated=this.authService.isAuthenticated;
+    this.roles=this.authService.roles;
   }
 
   
@@ -50,7 +54,7 @@ export class OffersComponent {
                   map(postulations => ({
                     ...offer,
                     type: postulations.some((postulation: Postulations) =>
-                      this.isAuthenticated &&
+                      this.isAuthenticated && this.roles == "CANDIDATE" &&
                       postulation.jobOffers_id === offer.id &&
                       postulation.candidate_id === this.authService.userinfos.id
                     ) ? 'applied' : 'not applied'

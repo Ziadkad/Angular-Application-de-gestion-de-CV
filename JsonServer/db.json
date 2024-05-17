@@ -47,6 +47,14 @@
   ],
   "companies": [
     {
+      "id": "99999999",
+      "nom": "Ziad",
+      "email": "b@b",
+      "password": "2",
+      "capital": 1000000,
+      "role": "COMPANY"
+    },
+    {
       "id": "1",
       "nom": "ABC Corporation",
       "email": "info@abccorp.com",
@@ -973,28 +981,40 @@
       "Date": "2024-05-15T15:08:04.732Z"
     },
     {
-      "id": "72608",
-      "jobOffers_id": "2",
-      "candidate_id": "9999999",
-      "Date": "2024-05-16T08:42:04.103Z"
-    },
-    {
       "id": "26859",
       "jobOffers_id": "1",
       "candidate_id": "9999999",
       "Date": "2024-05-16T08:43:58.613Z"
     },
     {
-      "id": "151270",
-      "jobOffers_id": "2c91",
-      "candidate_id": "9999999",
-      "Date": "2024-05-16T08:43:59.887Z"
-    },
-    {
       "id": "175467",
       "jobOffers_id": "2353",
       "candidate_id": "9999999",
       "Date": "2024-05-17T10:32:42.231Z"
+    },
+    {
+      "id": "171883",
+      "jobOffers_id": "1",
+      "candidate_id": "99999999",
+      "Date": "2024-05-17T10:43:36.386Z"
+    },
+    {
+      "id": "52199",
+      "jobOffers_id": "2",
+      "candidate_id": "99999999",
+      "Date": "2024-05-17T10:43:36.899Z"
+    },
+    {
+      "id": "120856",
+      "jobOffers_id": "2c91",
+      "candidate_id": "99999999",
+      "Date": "2024-05-17T10:43:37.631Z"
+    },
+    {
+      "id": "98564",
+      "jobOffers_id": "2353",
+      "candidate_id": "99999999",
+      "Date": "2024-05-17T10:43:38.877Z"
     }
   ]
 }
