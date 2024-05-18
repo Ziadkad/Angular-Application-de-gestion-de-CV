@@ -23,15 +23,7 @@ export class CrudJobOffersService {
 
 
   createJobOffer(jobOffer: JobOffers): Observable<JobOffers> {
-    // convert skills numbers to string
-    const skillsStringArray = jobOffer.skills_required.map(skill => Skills[skill]);
-    return this.http.post<JobOffers>(this.apiUrl,{
-        id: this.generateRandomNumber(1, 200000).toString,
-        "company_id": jobOffer.company_id,
-        "title": jobOffer.title,
-        "description": jobOffer.description,
-        "skills_required": skillsStringArray
-    });
+    return this.http.post<JobOffers>(this.apiUrl,jobOffer);
   }
 
   getAllJobOffers(): Observable<JobOffers[]> {
