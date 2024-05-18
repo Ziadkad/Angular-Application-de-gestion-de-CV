@@ -63,6 +63,10 @@ export class CrdPostulationsService {
   getPostulationByOffersAndCandidate(idOffer: String, idCandidate: string): Observable<Postulations> {
     return this.http.get<Postulations>(`${this.apiUrl}?jobOffers_id=${idOffer}&candidate_id=${idCandidate}`);
   }
+  getPostulationByOfferId(idOffer: String): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}?jobOffers_id=${idOffer}`);
+  }
+
   deletePostulation(id: string): Observable<any> {
     return this.http.delete<any>(`${this.apiUrl}/${id}`);
   }

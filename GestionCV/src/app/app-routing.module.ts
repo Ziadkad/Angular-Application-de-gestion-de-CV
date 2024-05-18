@@ -14,6 +14,7 @@ import { OffersComponent } from './components/offers/offers.component';
 import { CandidatesComponent } from './components/candidates/candidates.component';
 import { AddOfferComponent } from './components/add-offer/add-offer.component';
 import { MyOffersComponent } from './components/my-offers/my-offers.component';
+import { ApplicationsComponent } from './components/applications/applications.component';
 
 const routes: Routes = [
   { path:'', component: HomeComponent},
@@ -28,7 +29,7 @@ const routes: Routes = [
   ]},
   { path:'addoffer', component: AddOfferComponent, canActivate:[authGuard,roleGuard], data:{roles: ['COMPANY']}},
   { path:'updateoffer/:id', component: AddOfferComponent, canActivate:[authGuard,roleGuard], data:{roles: ['COMPANY']}},
-  { path:'application/:id', component: AddOfferComponent, canActivate:[authGuard,roleGuard], data:{roles: ['COMPANY']}},
+  { path:'application/:id', component: ApplicationsComponent, canActivate:[authGuard,roleGuard], data:{roles: ['COMPANY']}},
   { path:'myoffers', component: MyOffersComponent, canActivate:[authGuard,roleGuard], data:{roles: ['COMPANY']}},
   { path:'faq',component: HomeComponent},
   { path:'contact',component: HomeComponent},

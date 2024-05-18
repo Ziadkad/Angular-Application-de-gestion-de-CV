@@ -24,6 +24,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CandidatesComponent } from './components/candidates/candidates.component';
 import { AddOfferComponent } from './components/add-offer/add-offer.component';
 import { MyOffersComponent } from './components/my-offers/my-offers.component';
+import { ApplicationsComponent } from './components/applications/applications.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { MyOffersComponent } from './components/my-offers/my-offers.component';
     CandidatesComponent,
     AddOfferComponent,
     MyOffersComponent,
+    ApplicationsComponent,
   ],
   imports: [
     BrowserModule,
