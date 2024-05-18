@@ -28,6 +28,7 @@ const routes: Routes = [
   ]},
   { path:'addoffer', component: AddOfferComponent, canActivate:[authGuard,roleGuard], data:{roles: ['COMPANY']}},
   { path:'updateoffer/:id', component: AddOfferComponent, canActivate:[authGuard,roleGuard], data:{roles: ['COMPANY']}},
+  { path:'application/:id', component: AddOfferComponent, canActivate:[authGuard,roleGuard], data:{roles: ['COMPANY']}},
   { path:'myoffers', component: MyOffersComponent, canActivate:[authGuard,roleGuard], data:{roles: ['COMPANY']}},
   { path:'faq',component: HomeComponent},
   { path:'contact',component: HomeComponent},
