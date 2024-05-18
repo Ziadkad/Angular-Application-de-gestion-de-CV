@@ -97,7 +97,7 @@ export class ProfileComponent {
   }
   ngDoCheck(): void {
     if (this.file) {
-      this.myForm.controls['cv'].setValue("assets/images/"+this.file.name);
+      this.myForm.controls['cv'].setValue('assets/images/' + this.file.name);
     }
     this.skillsAdded = this.authservice.userinfos.skills;
   }
@@ -129,24 +129,7 @@ export class ProfileComponent {
   onSubmitForm() {
     console.log('invoked');
     if (this.file) {
-      // const formData = new FormData();
-      console.log(this.myForm.value);
-
-      // formData.append('file', this.file, this.file.name);
-
-      // const upload$ = this.http.post("https://httpbin.org/post", formData);
-
       this.status = 'uploading';
-
-      // upload$.subscribe({
-      //   next: () => {
-      //     this.status = 'success';
-      //   },
-      //   error: (error: any) => {
-      //     this.status = 'fail';
-      //     return throwError(() => error);
-      //   },
-      // });
 
       this.myForm.value.skills = this.skillsAdded;
       this.submitted = true;
