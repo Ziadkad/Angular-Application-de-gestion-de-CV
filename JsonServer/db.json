@@ -762,7 +762,7 @@
     },
     {
       "id": "89e6",
-      "company_id": "1",
+      "company_id": "99999999",
       "title": "Software Engineer",
       "description": "Join our team to develop cutting-edge software solutions.",
       "skills_required": [
@@ -780,6 +780,50 @@
         "AI",
         "API_DOCUMENTATION",
         "BIG_DATA"
+      ]
+    },
+    {
+      "id": "800a",
+      "company_id": "99999999",
+      "title": "aaaaaaaaaa",
+      "description": "asddddddddddddddddddddddddddd"
+    },
+    {
+      "id": "800a",
+      "company_id": "99999999",
+      "title": "aaaaaaaaaa",
+      "description": "asddddddddddddddddddddddddddd"
+    },
+    {
+      "id": "174689",
+      "company_id": "99999999",
+      "title": "aassssssssss",
+      "description": "sdaaaaaaaaaasssssssssss",
+      "skills_required": [
+        "DEBUGGING",
+        "PROGRAMMING",
+        "AI"
+      ]
+    },
+    {
+      "id": "166226",
+      "company_id": "99999999",
+      "title": "aaaaaaaaa",
+      "description": "assdmk kljdsjlk qwjklekl nm,dn nsan dashikl d jnasdjnkqjnwojildqw ",
+      "skills_required": [
+        "SCRUM",
+        "CODE_REVIEW",
+        "BDD"
+      ]
+    },
+    {
+      "id": "55820",
+      "company_id": "99999999",
+      "title": "cxxczzzzzzzzzzzzzzzzzzzzzzzz",
+      "description": "zxccccccccccccccccccxzzzzzzzzzzzzzzzzz",
+      "skills_required": [
+        "DEBUGGING",
+        "AI"
       ]
     }
   ],
@@ -927,6 +971,24 @@
       "jobOffers_id": "1",
       "candidate_id": "9999999",
       "Date": "2024-05-17T11:28:57.027Z"
+    },
+    {
+      "id": "198658",
+      "jobOffers_id": "2dd9",
+      "candidate_id": "9999999",
+      "Date": "2024-05-17T14:08:27.484Z"
+    },
+    {
+      "id": "169241",
+      "jobOffers_id": "017e",
+      "candidate_id": "9999999",
+      "Date": "2024-05-17T14:08:33.891Z"
+    },
+    {
+      "id": "110690",
+      "jobOffers_id": "b39f",
+      "candidate_id": "9999999",
+      "Date": "2024-05-17T14:08:34.804Z"
     }
   ]
 }

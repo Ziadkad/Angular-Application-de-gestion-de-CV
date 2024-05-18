@@ -1,1 +1,118 @@
-<p>add-offer works!</p>
+<p-toast />
+<div class="flex items-center justify-center p-12">
+    <div class="mx-auto w-full max-w-[550px] bg-white">
+        <h2 class="font-semibold text-3xl text-gray-600 mb-6" *ngIf="add">Add offer</h2>
+        <h2 class="font-semibold text-3xl text-gray-600 mb-6" *ngIf="!add">Update offer</h2>
+        <form [formGroup]="offerForm" (ngSubmit)="onSubmitOffer()">
+            <div class="mb-5">
+                <label for="title" class="mb-3 block text-base font-medium text-[#07074D]">
+                    Job Title
+                </label>
+                <input formControlName="title" type="text" name="title" id="title" placeholder="Job Title"
+                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                <span
+                    *ngIf="(submitted || offerForm.get('title')?.touched) && offerForm.get('title')?.errors?.['required']">Title Is Required</span>
+                <br>
+                <span
+                    *ngIf="(submitted || offerForm.get('title')?.touched) && offerForm.get('title')?.errors?.['minlength']">MinLength
+                    is 5 characters</span>
+            </div>
+            <div class="mb-5">
+                <label for="description" class="mb-3 block text-base font-medium text-[#07074D]">
+                    Description
+                </label>
+                <textarea formControlName="description" rows="4" name="description" id="description" placeholder="Type your description"
+                    class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"></textarea>
+                <span
+                    *ngIf="(submitted || offerForm.get('description')?.touched) && offerForm.get('description')?.errors?.['required']">Description Is Required</span>
+                <br>
+                <span
+                    *ngIf="(submitted || offerForm.get('description')?.touched) && offerForm.get('description')?.errors?.['minlength']">MinLength
+                    is 20 characters</span>
+            </div>
+
+
+
+            <div class="mb-5">
+                <label for="description" class="mb-3 block text-base font-medium text-[#07074D]">
+                    Skills Required For The Job
+                </label>
+                <dd  class="w-full mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                    <div class="w-full" *ngIf="skillsAdded">
+                        <div class="flex flex-col items-center relative">
+                            <div class="w-full  ">
+                                <div class="my-2 p-1 flex border border-gray-200 bg-white rounded ">
+                                    <div class="flex flex-auto flex-wrap">
+                                        <div *ngFor="let item of skillsAdded"
+                                            class="flex justify-center items-center m-1 font-medium py-1 px-2  rounded-full text-teal-700 bg-teal-100 border border-teal-300 ">
+                                            <div class="text-xs font-normal leading-none max-w-full flex-initial">
+                                                {{item}}
+                                            </div>
+                                            <input type="hidden" [value]="item" />
+                                            <div class="flex flex-auto flex-row-reverse">
+                                                <div (click)="popSkillsToAdded(item)">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%"
+                                                        height="100%" fill="none" viewBox="0 0 24 24"
+                                                        stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                        class="feather feather-x cursor-pointer hover:text-teal-400 rounded-full w-4 h-4 ml-2">
+                                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="text-gray-300 w-8 py-1 pl-2 pr-1 border-l flex items-center border-gray-200 ">
+                                        <button type="button" (click)="dropdownFunc()"
+                                            class="cursor-pointer w-6 h-6 text-gray-600 outline-none focus:outline-none">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-chevron-up w-4 h-4">
+                                                <polyline points="18 15 12 9 6 15"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div [ngClass]="{'hidden ': !dropdown}"
+                                class="relative shadow top-100 bg-white z-40 w-full lef-0 rounded max-h-64 overflow-y-auto"
+                                *ngIf="skillsEnums">
+                                <div class="flex flex-col w-full"
+                                    *ngFor="let keyValuePair of skillsEnums | keyvalue">
+                                    <div
+                                        class="cursor-pointer w-full border-gray-100 rounded-t border-b hover:bg-teal-100">
+                                        <div
+                                            class="flex w-full items-center p-2 pl-2 border-transparent border-l-2 relative hover:border-teal-100">
+                                            <div class="w-full items-center flex"
+                                                (click)="pushSkillsToAdded(keyValuePair.value)">
+                                                <div class="mx-2 leading-6">{{ keyValuePair.value }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </dd>
+            </div>
+
+
+            <div>
+                <button type="submit"
+                    class="hover:shadow-form rounded-md bg-blue-500 py-3 px-8 text-base font-semibold text-white outline-none">
+                    <div *ngIf="add"> Add </div>
+                    <div *ngIf="!add"> Update </div>
+                </button>
+            </div>
+        </form>
+
+    </div>
+
+</div>
