@@ -9,9 +9,9 @@
       "password": "hh",
       "cv": "https://example.com/john_smith_cv.pdf",
       "skills": [
-        10,
-        80,
-        12
+        "JavaScript",
+        "React",
+        "Node.js"
       ],
       "role": "CANDIDATE"
     },
