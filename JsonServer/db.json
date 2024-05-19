@@ -22,16 +22,14 @@
       "datenaissance": "2024-05-17",
       "email": "a@a",
       "password": "1",
-      "cv": null,
+      "cv": "assets/images/companyIcon.png",
       "skills": [
         "JavaScript",
         "React",
         "Node.js",
-        "ALGORITHMS",
-        "DEBUGGING",
-        "AI"
+        "ALGORITHMS"
       ],
-      "role": "CANDIDATE"
+      "role": 0
     },
     {
       "id": "a2fb",
@@ -42,7 +40,7 @@
       "password": "Hsahkldbashdsahdas21321321sadSADAS",
       "cv": "",
       "skills": [],
-      "role": 0
+      "role": "CANDIDATE"
     }
   ],
   "companies": [

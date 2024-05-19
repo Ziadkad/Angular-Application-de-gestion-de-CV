@@ -25,6 +25,8 @@ import { CandidatesComponent } from './components/candidates/candidates.componen
 import { AddOfferComponent } from './components/add-offer/add-offer.component';
 import { MyOffersComponent } from './components/my-offers/my-offers.component';
 import { ApplicationsComponent } from './components/applications/applications.component';
+import { FaqComponent } from './components/faq/faq.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { ApplicationsComponent } from './components/applications/applications.co
     AddOfferComponent,
     MyOffersComponent,
     ApplicationsComponent,
+    FaqComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
