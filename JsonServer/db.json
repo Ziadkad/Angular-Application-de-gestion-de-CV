@@ -22,7 +22,7 @@
       "datenaissance": "2024-05-17",
       "email": "a@a",
       "password": "1",
-      "cv": "assets/images/videoframe_3381517.png",
+      "cv": null,
       "skills": [
         "JavaScript",
         "React",
@@ -31,7 +31,7 @@
         "DEBUGGING",
         "AI"
       ],
-      "role": 0
+      "role": "CANDIDATE"
     },
     {
       "id": "a2fb",
@@ -789,12 +789,6 @@
       "description": "asddddddddddddddddddddddddddd"
     },
     {
-      "id": "800a",
-      "company_id": "99999999",
-      "title": "aaaaaaaaaa",
-      "description": "asddddddddddddddddddddddddddd"
-    },
-    {
       "id": "174689",
       "company_id": "99999999",
       "title": "aassssssssss",
@@ -989,6 +983,48 @@
       "jobOffers_id": "b39f",
       "candidate_id": "9999999",
       "Date": "2024-05-17T14:08:34.804Z"
+    },
+    {
+      "id": "156237",
+      "jobOffers_id": "55820",
+      "candidate_id": "9999999",
+      "Date": "2024-05-18T23:34:13.494Z"
+    },
+    {
+      "id": "68550",
+      "jobOffers_id": "166226",
+      "candidate_id": "9999999",
+      "Date": "2024-05-18T23:34:14.122Z"
+    },
+    {
+      "id": "176880",
+      "jobOffers_id": "174689",
+      "candidate_id": "9999999",
+      "Date": "2024-05-18T23:34:14.806Z"
+    },
+    {
+      "id": "176339",
+      "jobOffers_id": "15a1",
+      "candidate_id": "9999999",
+      "Date": "2024-05-18T23:34:16.413Z"
+    },
+    {
+      "id": "42885",
+      "jobOffers_id": "800a",
+      "candidate_id": "9999999",
+      "Date": "2024-05-18T23:34:19.250Z"
+    },
+    {
+      "id": "42885",
+      "jobOffers_id": "800a",
+      "candidate_id": "a2fb",
+      "Date": "2024-05-18T23:34:19.250Z"
+    },
+    {
+      "id": "42885",
+      "jobOffers_id": "800a",
+      "candidate_id": "1",
+      "Date": "2024-05-18T23:34:19.250Z"
     }
   ]
 }

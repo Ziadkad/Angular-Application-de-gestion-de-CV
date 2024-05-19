@@ -4,46 +4,40 @@
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                     <th scope="col" class="px-6 py-3">
-                        Job Title
+                        Candidate Full Name
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Description
+                        Application Date
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        skills
+                        Candidate Skills
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Action
+                        Candidate Email
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Action
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        Action
+                        Download CV
                     </th>
                 </tr>
             </thead>
-            <tbody *ngIf="offers">
-                <tr *ngFor="let item of offers" class="border-b" >
+            <tbody *ngIf="applications">
+                <tr *ngFor="let item of applications" class="border-b" >
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                        {{item.title}}
+                        {{item.candidateLastName +" "+ item.candidateFirstName}}
                     </th>
                     <td class="px-6 py-4">
-                        {{item.description}}
+                        {{item.Date | date}}
                     </td>
-                    <td class="px-6 py-4" class="border-b">
-                        <div *ngFor="let skill of item.skills_required">
+                    <td class="px-6 py-4">
+                        <div *ngFor="let skill of item.skills">
                             <span class="text-sm font-medium m-2 px-2.5 py-0.5 rounded bg-gray-700 text-white">{{skill}}</span>
                         </div>
                     </td>
                     <td class="px-6 py-4">
-                        <a [routerLink]="['/application/'+item.id]" class="font-medium text-sky-400 hover:underline">Applications</a>
+                        {{item.email}}
                     </td>
                     <td class="px-6 py-4">
-                        <a [routerLink]="['/updateoffer/'+item.id]" class="font-medium text-blue-600 hover:underline">Update</a>
-                    </td>
-                    <td class="px-6 py-4">
-                        <button (click)="deleteOffer(item.id)" class="font-medium text-red-600 hover:underline">Delete</button>
+                        <a [routerLink]="['/updateoffer/'+item.id]" class="font-medium text-blue-600 hover:underline">Download CV</a>
                     </td>
                 </tr>
 
