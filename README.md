@@ -85,7 +85,7 @@ The `db.json` file in the `JsonServer` directory contains sample data for recrui
   - Manage their profile
 
 ## Project Structure
-
+```
 Projet/
 ├── GestionCV/
 │   ├── src/
@@ -130,6 +130,7 @@ Projet/
 ├── JsonServer/
 │   └── db.json
 └── README.md
+```
 
 
 
