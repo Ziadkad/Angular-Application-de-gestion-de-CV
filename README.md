@@ -30,7 +30,7 @@ This project is a marketplace web application designed to connect recruiters wit
 
 1. Clone the repository:
     ```sh
-    git clone [https://github.com/Ziadkad/Angular-Application-de-gestion-de-CV]
+    git clone https://github.com/Ziadkad/Angular-Application-de-gestion-de-CV
     cd GestionCV
     ```
 
